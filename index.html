@@ -120,26 +120,24 @@ const API_KEY = "11098d35652f534fcb8f75ad72907603";
 
 async function searchMovie(query) {
 
-const response = await fetch(
-`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`
-);
+  const response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`
+  );
 
-const data = await response.json();
+  const data = await response.json();
 
-moviesDiv.innerHTML = "";
+  moviesDiv.innerHTML = "";
 
-data.results.slice(0,20).forEach(movie => {
+  data.results.slice(0,20).forEach(movie => {
 
-```
-moviesDiv.innerHTML += `
-  <div class="card">
-    <h2>${movie.title}</h2>
-    <p>${movie.release_date || "公開日不明"}</p>
-  </div>
-`;
-```
+    moviesDiv.innerHTML += `
+      <div class="card">
+        <h2>${movie.title}</h2>
+        <p>${movie.release_date || "公開日不明"}</p>
+      </div>
+    `;
 
-});
+  });
 
 }
 
