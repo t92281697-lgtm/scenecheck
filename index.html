@@ -155,6 +155,34 @@ async function searchMovie(query) {
 
 }
 
+async function showMovie(id){
+
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
+  );
+
+  const movie = await response.json();
+
+  moviesDiv.innerHTML = `
+    <div class="card">
+
+      <img
+        src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+        style="width:300px;max-width:100%;border-radius:10px;"
+      >
+
+      <h1>${movie.title}</h1>
+
+      <p>⭐ ${movie.vote_average}</p>
+
+      <p>${movie.release_date}</p>
+
+      <p>${movie.overview}</p>
+
+    </div>
+  `;
+}
+
 const movies = [
 
 {
