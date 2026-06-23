@@ -167,7 +167,7 @@ async function showMovie(id){
   .map(g => g.name)
   .join(" / ");
 
- moviesDiv.innerHTML = `
+moviesDiv.innerHTML = `
   <div class="card">
 
     <button onclick="location.reload()"
@@ -183,22 +183,44 @@ async function showMovie(id){
 
     <img
       src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
-      style="width:300px;max-width:100%;border-radius:10px;"
+      style="
+        width:300px;
+        max-width:100%;
+        border-radius:10px;
+        margin-bottom:20px;
+      "
     >
 
     <h1>${movie.title}</h1>
 
-    <p>⭐ ${movie.vote_average}</p>
+    <p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
 
     <p>🎭 ${genres}</p>
 
-    <p>${movie.release_date}</p>
+    <p>⏱️ ${movie.runtime} 分</p>
 
-    <p>${movie.overview}</p>
+    <p>📅 ${movie.release_date}</p>
+
+    <p>🌍 ${movie.production_countries.map(c => c.name).join(" / ")}</p>
+
+    <p>🏢 ${movie.production_companies.map(c => c.name).join(" / ")}</p>
+
+    <p>💰 ${
+      movie.budget
+        ? "$" + movie.budget.toLocaleString()
+        : "不明"
+    }</p>
+
+    <hr style="margin:20px 0; border-color:#333;">
+
+    <h3>あらすじ</h3>
+
+    <p style="line-height:1.7;">
+      ${movie.overview || "あらすじなし"}
+    </p>
 
   </div>
 `;
-
 }
 
 const movies = [
