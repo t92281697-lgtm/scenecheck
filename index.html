@@ -163,6 +163,10 @@ async function showMovie(id){
 
   const movie = await response.json();
 
+  const genres = movie.genres
+  .map(g => g.name)
+  .join(" / ");
+
  moviesDiv.innerHTML = `
   <div class="card">
 
