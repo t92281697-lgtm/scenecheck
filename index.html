@@ -5,20 +5,236 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SceneCheck</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
+}
+
+header{
+padding:30px;
+text-align:center;
+border-bottom:1px solid #333;
+}
+
+header h1{
+font-size:40px;
+}
+
+header p{
+color:#aaa;
+margin-top:10px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.search{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+margin-bottom:25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1c1c1c;
+padding:20px;
+border-radius:15px;
+}
+
+.card h2{
+margin-bottom:15px;
+}
+
+.rating{
+margin-bottom:12px;
+}
+
+.bar{
+height:10px;
+background:#333;
+border-radius:10px;
+overflow:hidden;
+margin-top:4px;
+}
+
+.fill{
+height:100%;
+background:#ff4d4d;
+}
+
+.tag{
+display:inline-block;
+background:#333;
+padding:5px 10px;
+border-radius:999px;
+font-size:12px;
+margin:5px 5px 0 0;
+}
+</style>
+
 </head>
+
 <body>
+
+<header>
 <h1>🎬 SceneCheck</h1>
-<p>映画を見る前にセンシティブなシーンを確認</p>
+<p>映画を見る前にセンシティブな内容を確認</p>
+</header>
 
-<input type="text" placeholder="映画タイトルを検索">
+<div class="container">
 
-<h2>サンプル作品</h2>
+<input
+id="search"
+class="search"
+placeholder="映画タイトルを検索..."
 
-<ul>
-<li>Oppenheimer（暴力 3/5）</li>
-<li>Joker（暴力 5/5）</li>
-<li>Interstellar（暴力 1/5）</li>
-</ul>
+>
+
+<div class="grid" id="movies"></div>
+
+</div>
+
+<script>
+
+const movies = [
+
+{
+title:"Oppenheimer",
+sexual:2,
+violence:3,
+gore:1,
+tags:["戦争","流血"]
+},
+
+{
+title:"Joker",
+sexual:0,
+violence:5,
+gore:3,
+tags:["暴力","心理"]
+},
+
+{
+title:"Interstellar",
+sexual:0,
+violence:1,
+gore:0,
+tags:["家族向け","SF"]
+},
+
+{
+title:"Inception",
+sexual:1,
+violence:2,
+gore:0,
+tags:["SF","アクション"]
+},
+
+{
+title:"Titanic",
+sexual:3,
+violence:1,
+gore:0,
+tags:["恋愛","災害"]
+}
+
+];
+
+const moviesDiv =
+document.getElementById("movies");
+
+function render(list){
+
+moviesDiv.innerHTML="";
+
+list.forEach(movie=>{
+
+moviesDiv.innerHTML += `
+
+<div class="card">
+
+<h2>${movie.title}</h2>
+
+<div class="rating">
+性的表現 ${movie.sexual}/5
+<div class="bar">
+<div class="fill"
+style="width:${movie.sexual*20}%">
+</div>
+</div>
+</div>
+
+<div class="rating">
+暴力表現 ${movie.violence}/5
+<div class="bar">
+<div class="fill"
+style="width:${movie.violence*20}%">
+</div>
+</div>
+</div>
+
+<div class="rating">
+グロ表現 ${movie.gore}/5
+<div class="bar">
+<div class="fill"
+style="width:${movie.gore*20}%">
+</div>
+</div>
+</div>
+
+${movie.tags.map(
+tag=>`<span class="tag">${tag}</span>`
+).join("")}
+
+</div>
+
+`;
+
+});
+
+}
+
+render(movies);
+
+document
+.getElementById("search")
+.addEventListener("input",(e)=>{
+
+const value =
+e.target.value.toLowerCase();
+
+const filtered =
+movies.filter(movie=>
+movie.title
+.toLowerCase()
+.includes(value)
+);
+
+render(filtered);
+
+});
+
+</script>
 
 </body>
 </html>
