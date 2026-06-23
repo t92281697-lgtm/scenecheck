@@ -163,6 +163,17 @@ async function showMovie(id){
 
   const movie = await response.json();
 
+  const creditsResponse = await fetch(
+  `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`
+);
+
+const credits = await creditsResponse.json();
+
+const cast = credits.cast
+  .slice(0,5)
+  .map(actor => actor.name)
+  .join(" / ");
+  
   const genres = movie.genres
   .map(g => g.name)
   .join(" / ");
