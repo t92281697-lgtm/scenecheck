@@ -134,6 +134,8 @@ async function searchMovie(query) {
 
   const data = await response.json();
 
+  currentResults = data.results;
+
   moviesDiv.innerHTML = "";
 
   data.results.slice(0,20).forEach(movie => {
@@ -165,6 +167,37 @@ async function searchMovie(query) {
 
 }
 
+function showSearchResults() {
+
+  moviesDiv.innerHTML = "";
+
+  currentResults.slice(0,20).forEach(movie => {
+
+    moviesDiv.innerHTML += `
+      <div class="card" onclick="showMovie('${movie.id}')">
+
+        <img
+          src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+          style="width:100%; border-radius:10px; margin-bottom:10px;"
+        >
+
+        <h2>${movie.title}</h2>
+
+        <p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
+
+        <p>
+          📅 ${
+            movie.release_date
+              ? movie.release_date.substring(0,4)
+              : "不明"
+          }
+        </p>
+
+      </div>
+    `;
+  });
+
+}
 async function showMovie(id){
 
   const language =
@@ -330,6 +363,8 @@ tags:["恋愛","災害"]
 
 const moviesDiv =
 document.getElementById("movies");
+
+let currentResults = [];
 
 function render(list){
 
