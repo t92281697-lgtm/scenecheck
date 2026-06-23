@@ -163,24 +163,36 @@ async function showMovie(id){
 
   const movie = await response.json();
 
-  moviesDiv.innerHTML = `
-    <div class="card">
+ moviesDiv.innerHTML = `
+  <div class="card">
 
-      <img
-        src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
-        style="width:300px;max-width:100%;border-radius:10px;"
-      >
+    <button onclick="location.reload()"
+      style="
+        padding:10px 15px;
+        border:none;
+        border-radius:8px;
+        margin-bottom:20px;
+        cursor:pointer;
+      ">
+      ← 検索に戻る
+    </button>
 
-      <h1>${movie.title}</h1>
+    <img
+      src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+      style="width:300px;max-width:100%;border-radius:10px;"
+    >
 
-      <p>⭐ ${movie.vote_average}</p>
+    <h1>${movie.title}</h1>
 
-      <p>${movie.release_date}</p>
+    <p>⭐ ${movie.vote_average}</p>
 
-      <p>${movie.overview}</p>
+    <p>${movie.release_date}</p>
 
-    </div>
-  `;
+    <p>${movie.overview}</p>
+
+  </div>
+`;
+
 }
 
 const movies = [
