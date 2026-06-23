@@ -173,6 +173,18 @@ const cast = credits.cast
   .slice(0,5)
   .map(actor => actor.name)
   .join(" / ");
+
+const videosResponse = await fetch(
+  `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`
+);
+
+const videos = await videosResponse.json();
+
+const trailer = videos.results.find(
+  video =>
+    video.site === "YouTube" &&
+    video.type === "Trailer"
+);
   
   const genres = movie.genres
   .map(g => g.name)
