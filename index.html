@@ -132,6 +132,12 @@ async function searchMovie(query) {
 
     moviesDiv.innerHTML += `
       <div class="card">
+
+        <img
+      src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+      style="width:100%; border-radius:10px; margin-bottom:10px;"
+    >
+    
         <h2>${movie.title}</h2>
         <p>${movie.release_date || "公開日不明"}</p>
       </div>
