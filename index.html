@@ -216,6 +216,26 @@ moviesDiv.innerHTML = `
 
     <h1>${movie.title}</h1>
 
+    ${trailer ? `
+<p>
+  <a
+    href="https://www.youtube.com/watch?v=${trailer.key}"
+    target="_blank"
+    style="
+      display:inline-block;
+      padding:10px 15px;
+      background:#e50914;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      margin:10px 0;
+    "
+  >
+    ▶ 予告編を見る
+  </a>
+</p>
+` : ""}
+
     <p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
 
     <p>🎭 ${genres}</p>
