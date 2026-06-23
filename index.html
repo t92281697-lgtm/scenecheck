@@ -130,18 +130,24 @@ async function searchMovie(query) {
 
   data.results.slice(0,20).forEach(movie => {
 
-    moviesDiv.innerHTML += `
-      <div class="card">
+ moviesDiv.innerHTML += `
+  <div class="card">
 
-        <img
+    <img
       src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
       style="width:100%; border-radius:10px; margin-bottom:10px;"
     >
-    
-        <h2>${movie.title}</h2>
-        <p>${movie.release_date || "公開日不明"}</p>
-      </div>
-    `;
+
+    <h2>${movie.title}</h2>
+
+    <p><strong>公開日:</strong> ${movie.release_date || "公開日不明"}</p>
+
+    <p style="margin-top:10px; color:#ccc; line-height:1.5;">
+      ${movie.overview || "あらすじなし"}
+    </p>
+
+  </div>
+`;
 
   });
 
