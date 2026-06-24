@@ -130,6 +130,14 @@ const aiRatings = {
 872585: { violence: 4, sexual: 2, gore: 2 }  // Oppenheimer など
 };
 
+const aiRatings = {
+475557: {
+violence: 5,
+sexual: 1,
+gore: 3
+}
+};
+
 async function searchMovie(query) {
 
  const language =
@@ -218,6 +226,13 @@ currentMovieId = id;
 
   const movie = await response.json();
 
+  const aiRating = aiRatings[id] || {
+violence: 3,
+sexual: 1,
+gore: 1
+};
+
+
   const savedRating = JSON.parse(
   localStorage.getItem("rating_" + id)
 );
@@ -277,9 +292,9 @@ moviesDiv.innerHTML = `
 
     <h3>🤖 AI推定評価</h3>
 
-<p>💥 暴力表現: 3 / 5</p>
-<p>❤️ 性的表現: 1 / 5</p>
-<p>🩸 グロ表現: 2 / 5</p>
+<p>💥 暴力表現: ${aiRating.violence} / 5</p>
+<p>❤️ 性的表現: ${aiRating.sexual} / 5</p>
+<p>🩸 グロ表現: ${aiRating.gore} / 5</p>
 
 <p style="font-size:12px;color:#999;">
 ※AIによる参考評価
