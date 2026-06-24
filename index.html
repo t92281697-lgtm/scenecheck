@@ -353,6 +353,8 @@ moviesDiv.innerHTML = `
   評価を送信
 </button>
 
+<div id="ratingResult" style="margin-top:20px;"></div>
+
   </div>
 `;
 
@@ -369,11 +371,12 @@ document.getElementById("sexual").selectedIndex + 1;
 const gore =
 document.getElementById("gore").selectedIndex + 1;
 
-alert(
-`暴力: ${violence}
-性的: ${sexual}
-グロ: ${gore}`
-);
+document.getElementById("ratingResult").innerHTML = `
+  <h3>あなたの評価</h3>
+  <p>💥 暴力表現: ${violence}</p>
+  <p>❤️ 性的表現: ${sexual}</p>
+  <p>🩸 グロ表現: ${gore}</p>
+`;
 
 }
 
