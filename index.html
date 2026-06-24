@@ -125,6 +125,11 @@ const API_KEY = "11098d35652f534fcb8f75ad72907603";
 
 let currentMovieId = null;
 
+const aiRatings = {
+475557: { violence: 5, sexual: 1, gore: 3 }, // Joker
+872585: { violence: 4, sexual: 2, gore: 2 }  // Oppenheimer など
+};
+
 async function searchMovie(query) {
 
  const language =
@@ -269,6 +274,17 @@ moviesDiv.innerHTML = `
     >
 
     <h1>${movie.title}</h1>
+
+    <h3>🤖 AI推定評価</h3>
+
+<p>💥 暴力表現: 3 / 5</p>
+<p>❤️ 性的表現: 1 / 5</p>
+<p>🩸 グロ表現: 2 / 5</p>
+
+<p style="font-size:12px;color:#999;">
+※AIによる参考評価
+</p>
+
 
     ${trailer ? `
 <p>
