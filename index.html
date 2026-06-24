@@ -358,6 +358,26 @@ moviesDiv.innerHTML = `
 
 }
 
+function submitRating() {
+
+const violence =
+document.getElementById("violence").selectedIndex + 1;
+
+const sexual =
+document.getElementById("sexual").selectedIndex + 1;
+
+const gore =
+document.getElementById("gore").selectedIndex + 1;
+
+alert(
+`暴力: ${violence}
+性的: ${sexual}
+グロ: ${gore}`
+);
+
+}
+
+
 const movies = [
 
 {
