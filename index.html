@@ -312,10 +312,46 @@ moviesDiv.innerHTML = `
       ${movie.overview || "あらすじなし"}
     </p>
 
-    <hr ...>
+<hr style="margin:20px 0; border-color:#333;">
+
 <h3>⚠️ SceneCheck評価</h3>
-...
-<button>評価を送信</button>
+
+<p><strong>暴力表現</strong></p>
+<select>
+  <option>1 - ほぼなし</option>
+  <option>2 - 少しあり</option>
+  <option>3 - 普通</option>
+  <option>4 - 強い</option>
+  <option>5 - 非常に強い</option>
+</select>
+
+<br><br>
+
+<p><strong>性的表現</strong></p>
+<select>
+  <option>1 - ほぼなし</option>
+  <option>2 - 軽いキスや下ネタ</option>
+  <option>3 - ベッドシーン示唆</option>
+  <option>4 - 明確な性描写</option>
+  <option>5 - 非常に露骨</option>
+</select>
+
+<br><br>
+
+<p><strong>グロ表現</strong></p>
+<select>
+  <option>1 - なし</option>
+  <option>2 - 軽い流血</option>
+  <option>3 - 傷や死体が見える</option>
+  <option>4 - 内臓・切断描写あり</option>
+  <option>5 - 非常に生々しい</option>
+</select>
+
+<br><br>
+
+<button>
+  評価を送信
+</button>  
 
   </div>
 `;
