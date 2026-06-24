@@ -213,6 +213,10 @@ currentMovieId = id;
 
   const movie = await response.json();
 
+  const savedRating = JSON.parse(
+  localStorage.getItem("rating_" + id)
+);
+
   const creditsResponse = await fetch(
   `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`
 );
@@ -357,7 +361,19 @@ moviesDiv.innerHTML = `
   評価を送信
 </button>
 
-<div id="ratingResult" style="margin-top:20px;"></div>
+<div id="ratingResult" style="margin-top:20px;">
+  ${
+    savedRating
+      ? `
+        <h3>あなたの評価</h3>
+        <p>💥 暴力表現: ${savedRating.violence}</p>
+        <p>❤️ 性的表現: ${savedRating.sexual}</p>
+        <p>🩸 グロ表現: ${savedRating.gore}</p>
+      `
+      : ""
+  }
+</div>
+
 
   </div>
 `;
