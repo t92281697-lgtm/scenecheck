@@ -378,6 +378,15 @@ document.getElementById("ratingResult").innerHTML = `
   <p>🩸 グロ表現: ${gore}</p>
 `;
 
+localStorage.setItem(
+  "rating_" + movie.id,
+  JSON.stringify({
+    violence,
+    sexual,
+    gore
+  })
+);
+
 }
 
 
