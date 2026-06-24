@@ -123,6 +123,8 @@ placeholder="映画タイトルを検索..."
 
 const API_KEY = "11098d35652f534fcb8f75ad72907603";
 
+let currentMovieId = null;
+
 async function searchMovie(query) {
 
  const language =
@@ -199,6 +201,8 @@ function showSearchResults() {
 
 }
 async function showMovie(id){
+
+currentMovieId = id;
 
   const language =
   document.getElementById("language").value;
