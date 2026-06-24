@@ -317,7 +317,7 @@ moviesDiv.innerHTML = `
 <h3>⚠️ SceneCheck評価</h3>
 
 <p><strong>暴力表現</strong></p>
-<select>
+<select id="violence">
   <option>1 - ほぼなし</option>
   <option>2 - 少しあり</option>
   <option>3 - 普通</option>
@@ -328,7 +328,7 @@ moviesDiv.innerHTML = `
 <br><br>
 
 <p><strong>性的表現</strong></p>
-<select>
+<select id="sexual">
   <option>1 - ほぼなし</option>
   <option>2 - 軽いキスや下ネタ</option>
   <option>3 - ベッドシーン示唆</option>
@@ -339,7 +339,7 @@ moviesDiv.innerHTML = `
 <br><br>
 
 <p><strong>グロ表現</strong></p>
-<select>
+<select id="gore">
   <option>1 - なし</option>
   <option>2 - 軽い流血</option>
   <option>3 - 傷や死体が見える</option>
@@ -349,9 +349,9 @@ moviesDiv.innerHTML = `
 
 <br><br>
 
-<button>
+<button onclick="submitRating()">
   評価を送信
-</button>  
+</button>
 
   </div>
 `;
