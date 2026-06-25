@@ -407,17 +407,28 @@ moviesDiv.innerHTML = `
 ※AIによる参考評価
 </p>
 
-<p
+<div
   style="
     margin-top:10px;
-    padding:8px;
+    padding:12px;
     background:#222;
     border-radius:8px;
-    display:inline-block;
   "
 >
-🔞 推奨年齢: ${ageRating}
-</p>
+  <h3>🎬 SceneCheck推奨年齢</h3>
+
+  <p>
+    🔞 ${ageRating}
+  </p>
+
+  <p style="margin-top:10px;">
+    ${ageReason}
+  </p>
+
+  <p style="font-size:12px;color:#999;">
+    ※映倫区分ではなくSceneCheck独自基準です
+  </p>
+</div>
 
 
     ${trailer ? `
