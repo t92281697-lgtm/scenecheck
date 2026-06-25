@@ -321,7 +321,7 @@ const certification =
   japanRelease?.release_dates?.[0]?.certification
   || "未登録";
 
- const aiRating = aiRatings[id];
+const aiRating = aiRatings[id];
 
 let ageRating = "評価データなし";
 
@@ -329,23 +329,28 @@ if (aiRating) {
 
   ageRating = "全年齢";
 
+  // 18+
   if (
-    aiRating.violence >= 4 ||
-    aiRating.gore >= 4
+    aiRating.sexual >= 5 ||
+    aiRating.gore >= 5
   ) {
     ageRating = "18+";
   }
+
+  // 16+
   else if (
-    aiRating.violence >= 3 ||
-    aiRating.sexual >= 3 ||
-    aiRating.gore >= 3
+    aiRating.violence >= 5 ||
+    aiRating.sexual >= 4 ||
+    aiRating.gore >= 4
   ) {
     ageRating = "16+";
   }
+
+  // 13+
   else if (
-    aiRating.violence >= 2 ||
+    aiRating.violence >= 3 ||
     aiRating.sexual >= 2 ||
-    aiRating.gore >= 2
+    aiRating.gore >= 3
   ) {
     ageRating = "13+";
   }
