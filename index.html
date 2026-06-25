@@ -292,6 +292,29 @@ sexual: 1,
 gore: 1
 };
 
+let ageRating = "全年齢";
+
+if (
+  aiRating.violence >= 4 ||
+  aiRating.gore >= 4
+) {
+  ageRating = "18+";
+}
+else if (
+  aiRating.violence >= 3 ||
+  aiRating.sexual >= 3 ||
+  aiRating.gore >= 3
+) {
+  ageRating = "16+";
+}
+else if (
+  aiRating.violence >= 2 ||
+  aiRating.sexual >= 2 ||
+  aiRating.gore >= 2
+) {
+  ageRating = "13+";
+}
+
 
   const savedRating = JSON.parse(
   localStorage.getItem("rating_" + id)
@@ -358,6 +381,18 @@ moviesDiv.innerHTML = `
 
 <p style="font-size:12px;color:#999;">
 ※AIによる参考評価
+</p>
+
+<p
+  style="
+    margin-top:10px;
+    padding:8px;
+    background:#222;
+    border-radius:8px;
+    display:inline-block;
+  "
+>
+🔞 推奨年齢: ${ageRating}
 </p>
 
 
