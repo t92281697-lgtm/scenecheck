@@ -317,30 +317,35 @@ if (aiRating) {
 
 }
 
-let ageReason = "";
+let ageReason = "AI評価データなし";
 
-if (aiRating.violence >= 4) {
-  ageReason += "💥 強い暴力表現あり<br>";
-}
+if (aiRating) {
 
-if (aiRating.sexual >= 3) {
-  ageReason += "❤️ 強い性的表現あり<br>";
-}
-else if (aiRating.sexual >= 2) {
-  ageReason += "❤️ 軽度の性的表現あり<br>";
-}
+  ageReason = "";
 
-if (aiRating.gore >= 4) {
-  ageReason += "🩸 強いグロ表現あり<br>";
-}
-else if (aiRating.gore >= 2) {
-  ageReason += "🩸 軽度のグロ表現あり<br>";
-}
+  if (aiRating.violence >= 4) {
+    ageReason += "💥 強い暴力表現あり<br>";
+  }
 
-if (ageReason === "") {
-  ageReason = "大きな注意表現はありません";
-}
+  if (aiRating.sexual >= 3) {
+    ageReason += "❤️ 強い性的表現あり<br>";
+  }
+  else if (aiRating.sexual >= 2) {
+    ageReason += "❤️ 軽度の性的表現あり<br>";
+  }
 
+  if (aiRating.gore >= 4) {
+    ageReason += "🩸 強いグロ表現あり<br>";
+  }
+  else if (aiRating.gore >= 2) {
+    ageReason += "🩸 軽度のグロ表現あり<br>";
+  }
+
+  if (ageReason === "") {
+    ageReason = "大きな注意表現はありません";
+  }
+
+}
 
   const savedRating = JSON.parse(
   localStorage.getItem("rating_" + id)
