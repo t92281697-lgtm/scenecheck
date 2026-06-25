@@ -201,21 +201,6 @@ async function searchMovie(query) {
 
   const data = await response.json();
 
-  const releaseResponse = await fetch(
-  `https://api.themoviedb.org/3/movie/${id}/release_dates?api_key=${API_KEY}`
-);
-
-const releaseData = await releaseResponse.json();
-
-const japanRelease =
-  releaseData.results.find(
-    r => r.iso_3166_1 === "JP"
-  );
-
-const certification =
-  japanRelease?.release_dates?.[0]?.certification
-  || "未登録";
-
   currentResults = data.results;
 
   moviesDiv.innerHTML = "";
@@ -300,6 +285,21 @@ currentMovieId = id;
   );
 
   const movie = await response.json();
+
+  const releaseResponse = await fetch(
+  `https://api.themoviedb.org/3/movie/${id}/release_dates?api_key=${API_KEY}`
+);
+
+const releaseData = await releaseResponse.json();
+
+const japanRelease =
+  releaseData.results.find(
+    r => r.iso_3166_1 === "JP"
+  );
+
+const certification =
+  japanRelease?.release_dates?.[0]?.certification
+  || "未登録";
 
  const aiRating = aiRatings[id];
 
