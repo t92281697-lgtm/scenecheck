@@ -201,6 +201,21 @@ async function searchMovie(query) {
 
   const data = await response.json();
 
+  const releaseResponse = await fetch(
+  `https://api.themoviedb.org/3/movie/${id}/release_dates?api_key=${API_KEY}`
+);
+
+const releaseData = await releaseResponse.json();
+
+const japanRelease =
+  releaseData.results.find(
+    r => r.iso_3166_1 === "JP"
+  );
+
+const certification =
+  japanRelease?.release_dates?.[0]?.certification
+  || "未登録";
+
   currentResults = data.results;
 
   moviesDiv.innerHTML = "";
@@ -403,6 +418,16 @@ moviesDiv.innerHTML = `
     >
 
     <h1>${movie.title}</h1>
+
+    <p
+  style="
+    margin-top:10px;
+    margin-bottom:15px;
+    font-weight:bold;
+  "
+>
+🎟️ TMDB年齢レーティング: ${certification}
+</p>
 
    <h3>🤖 AI推定評価</h3>
 
