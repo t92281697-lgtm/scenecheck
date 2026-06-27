@@ -988,3 +988,19 @@ localStorage.setItem(
 );
 
 }
+
+document
+  .getElementById("search")
+  .addEventListener("input", (e) => {
+
+    const query = e.target.value.trim();
+
+    if (query.length < 2) {
+      currentResults = [];
+      moviesDiv.innerHTML = "";
+      return;
+    }
+
+    searchMovie(query);
+
+  });
