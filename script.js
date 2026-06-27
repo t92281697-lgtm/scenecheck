@@ -1,3 +1,6 @@
+const moviesDiv =
+document.getElementById("movies");
+
 <script>
 
 const API_KEY = "11098d35652f534fcb8f75ad72907603";
