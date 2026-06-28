@@ -608,6 +608,8 @@ ID: ${movie.id}
 
 function showSearchResults() {
 
+ window.scrollTo(0,0);
+
 detailPage.style.display = "none";
 searchPage.style.display = "block";
 
@@ -645,10 +647,24 @@ ID: ${movie.id}
 }
 async function showMovie(id){
 
- searchPage.style.display = "none";
-detailPage.style.display = "block";
- 
+ window.scrollTo(0,0);
+
 currentMovieId = id;
+
+searchPage.style.display = "none";
+detailPage.style.display = "block";
+
+detailPage.innerHTML = `
+<div style="
+padding:60px;
+text-align:center;
+font-size:20px;
+">
+🎬 読み込み中...
+</div>
+`;
+
+const language = ...
 
   const language =
   document.getElementById("language").value;
