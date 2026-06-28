@@ -989,6 +989,8 @@ AI評価データ準備中
 </div> <!-- card -->
 `;
 
+ moviesDiv.innerHTML = "";
+
 }
 
 function submitRating() {
