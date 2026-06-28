@@ -93,16 +93,16 @@ padding:10px;
 }
 
 .grid{
-grid-template-columns:repeat(2,1fr);
-gap:10px;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
 }
 
 .card{
-padding:12px;
+    padding:8px;
 }
 
 .card h2{
-font-size:16px;
+    font-size:12px;
 }
 
 .rating{
