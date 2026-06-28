@@ -810,7 +810,7 @@ detailPage.innerHTML = `
   <img
   src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
   style="
-        width:150px;
+        width:120px;
         max-width:100%;
         border-radius:10px;
         margin-bottom:15px;
@@ -917,15 +917,29 @@ AI評価データ準備中
 
     <hr style="margin:20px 0; border-color:#333;">
 
-    <h3>出演者</h3>
+   <details style="margin-top:15px;">
 
-    <p>${cast}</p>
+<summary style="cursor:pointer;font-size:18px;">
+🎭 出演者
+</summary>
 
-    <h3>あらすじ</h3>
+<p style="margin-top:15px;">
+${cast}
+</p>
 
-    <p style="line-height:1.7;">
-      ${movie.overview || "あらすじなし"}
-    </p>
+</details>
+
+  <details style="margin-top:20px;">
+
+<summary style="cursor:pointer;font-size:18px;">
+📖 あらすじ
+</summary>
+
+<p style="margin-top:15px;line-height:1.7;">
+${movie.overview || "あらすじなし"}
+</p>
+
+</details>
 
      <p>🌍 ${movie.production_countries.map(c => c.name).join(" / ")}</p>
 
