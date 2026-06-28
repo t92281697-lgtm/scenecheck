@@ -116,3 +116,25 @@ font-size:15px;
 
 }
 
+.movie-top{
+    display:flex;
+    gap:25px;
+    align-items:flex-start;
+}
+
+.movie-info{
+    flex:1;
+}
+
+@media (max-width:768px){
+
+.movie-top{
+    flex-direction:column;
+}
+
+.movie-info{
+    width:100%;
+}
+
+}
+
