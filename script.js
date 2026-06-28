@@ -609,6 +609,9 @@ ID: ${movie.id}
 
 function showSearchResults() {
 
+detailPage.style.display = "none";
+searchPage.style.display = "block";
+
   moviesDiv.innerHTML = "";
 
   currentResults.slice(0,20).forEach(movie => {
@@ -650,6 +653,9 @@ ID: ${movie.id}
 }
 async function showMovie(id){
 
+ searchPage.style.display = "none";
+detailPage.style.display = "block";
+ 
 currentMovieId = id;
 
   const language =
@@ -773,7 +779,7 @@ const trailer = videos.results.find(
   .map(g => g.name)
   .join(" / ");
 
-moviesDiv.innerHTML = `
+detailPage.innerHTML = `
   <div class="card detail-card">
 
   <div class="movie-top">
