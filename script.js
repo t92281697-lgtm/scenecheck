@@ -738,7 +738,7 @@ if (aiRating) {
   }
 
   if (aiRating.sexual >= 3) {
-    ageReason += "❤️ 強い性的表現あり<br>";
+    ageReason += "❤️ 中程度の性的表現あり<br>";
   }
   else if (aiRating.sexual >= 2) {
     ageReason += "❤️ 軽度の性的表現あり<br>";
