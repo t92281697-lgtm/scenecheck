@@ -654,6 +654,9 @@ currentMovieId = id;
 searchPage.style.display = "none";
 detailPage.style.display = "block";
 
+ document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+
 detailPage.innerHTML = `
 <div style="
 padding:60px;
