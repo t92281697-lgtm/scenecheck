@@ -779,6 +779,9 @@ const trailer = videos.results.find(
   .map(g => g.name)
   .join(" / ");
 
+searchPage.style.display = "none";
+detailPage.style.display = "block";
+
 detailPage.innerHTML = `
   <div class="card detail-card">
 
