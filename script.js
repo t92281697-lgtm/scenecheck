@@ -771,7 +771,7 @@ const trailer = videos.results.find(
   .join(" / ");
 
 moviesDiv.innerHTML = `
-  <div class="card">
+  <div class="card detail-card">
 
   <div class="movie-top">
 
