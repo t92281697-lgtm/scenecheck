@@ -784,15 +784,18 @@ moviesDiv.innerHTML = `
       ← 検索に戻る
     </button>
 
-    <img
-      src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
-      style="
-        width:250px;
+  <img
+  src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+  style="
+        width:180px;
         max-width:100%;
         border-radius:10px;
-        margin-bottom:20px;
+        margin-bottom:15px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
       "
-    >
+>
 
     <h1>${movie.title}</h1>
 
@@ -870,23 +873,21 @@ AI評価データ準備中
 </p>
 ` : ""}
 
-    <p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
+   <div style="margin:15px 0; line-height:1.8;">
 
-    <p>🎭 ${genres}</p>
+<p>
+⭐ ${movie.vote_average.toFixed(1)}　
+🎭 ${genres}
+</p>
 
-    <p>⏱️ ${movie.runtime} 分</p>
+<p>
+⏱️ ${movie.runtime}分　
+📅 ${movie.release_date}
+</p>
 
-    <p>📅 ${movie.release_date}</p>
+</div>
 
-    <p>🌍 ${movie.production_countries.map(c => c.name).join(" / ")}</p>
-
-    <p>🏢 ${movie.production_companies.map(c => c.name).join(" / ")}</p>
-
-    <p>💰 ${
-      movie.budget
-        ? "$" + movie.budget.toLocaleString()
-        : "不明"
-    }</p>
+   
 
     <hr style="margin:20px 0; border-color:#333;">
 
@@ -899,6 +900,16 @@ AI評価データ準備中
     <p style="line-height:1.7;">
       ${movie.overview || "あらすじなし"}
     </p>
+
+     <p>🌍 ${movie.production_countries.map(c => c.name).join(" / ")}</p>
+
+    <p>🏢 ${movie.production_companies.map(c => c.name).join(" / ")}</p>
+
+    <p>💰 ${
+      movie.budget
+        ? "$" + movie.budget.toLocaleString()
+        : "不明"
+    }</p>
 
 <hr style="margin:20px 0; border-color:#333;">
 
