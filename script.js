@@ -819,82 +819,77 @@ margin-bottom:15px;
 
 <div class="movie-info">
 
-    <h1>${movie.title}</h1>
+  <button onclick="showSearchResults()"
+style="
+padding:10px 15px;
+border:none;
+border-radius:8px;
+margin-bottom:15px;
+cursor:pointer;
+">
+← 検索に戻る
+</button>
 
-    <p
-  style="
-    margin-top:10px;
-    margin-bottom:15px;
-    font-weight:bold;
-  "
+<div class="movie-top">
+
+<img
+class="movie-poster"
+src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
 >
-🎟️ TMDB年齢レーティング: ${certification}
-</p>
 
-  <h3>🤖 AI推定評価</h3>
+<div class="movie-info">
 
-${
-aiRating
-? `
-<p style="font-size:18px; margin:10px 0;">
-💥 ${aiRating.violence}/5　
-❤️ ${aiRating.sexual}/5　
-🩸 ${aiRating.gore}/5
-</p>
+<h1 style="margin-bottom:10px;">
+${movie.title}
+</h1>
 
-<p style="font-size:12px;color:#999;">
-※AIによる参考評価
-</p>
-`
-: `
-<p style="color:#999;">
-AI評価データ準備中
-</p>
-`
-}
-<div
-  style="
-    margin-top:10px;
-    padding:12px;
-    background:#222;
-    border-radius:8px;
-  "
->
-  <h3>🎬 SceneCheck推奨年齢</h3>
+<div style="
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:15px;
+font-size:14px;
+">
 
-  <p>
-    🔞 ${ageRating}
-  </p>
+<span>⭐ ${movie.vote_average.toFixed(1)}</span>
 
-  <p style="margin-top:10px;">
-    ${ageReason}
-  </p>
+<span>🔞 ${ageRating}</span>
 
-  <p style="font-size:12px;color:#999;">
-    ※映倫区分ではなくSceneCheck独自基準です
-  </p>
+<span>⏱ ${movie.runtime}分</span>
+
+<span>📅 ${movie.release_date?.substring(0,4) || "不明"}</span>
+
+<span>🎭 ${genres}</span>
+
 </div>
 
-
-    ${trailer ? `
-<p>
-  <a
-    href="https://www.youtube.com/watch?v=${trailer.key}"
-    target="_blank"
-    style="
-      display:inline-block;
-      padding:10px 15px;
-      background:#e50914;
-      color:white;
-      text-decoration:none;
-      border-radius:8px;
-      margin:10px 0;
-    "
-  >
-    ▶ 予告編を見る
-  </a>
+<p style="
+font-weight:bold;
+margin-bottom:15px;
+">
+🎟️ TMDB: ${certification}
 </p>
+
+${trailer ? `
+<a
+href="https://www.youtube.com/watch?v=${trailer.key}"
+target="_blank"
+style="
+display:inline-block;
+padding:10px 15px;
+background:#e50914;
+color:white;
+text-decoration:none;
+border-radius:8px;
+"
+>
+▶ 予告編を見る
+</a>
 ` : ""}
+
+</div>
+
+</div>
 
    <div style="margin:15px 0; line-height:1.8;">
 
