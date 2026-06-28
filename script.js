@@ -809,14 +809,16 @@ moviesDiv.innerHTML = `
 🎟️ TMDB年齢レーティング: ${certification}
 </p>
 
-   <h3>🤖 AI推定評価</h3>
+  <h3>🤖 AI推定評価</h3>
 
 ${
 aiRating
 ? `
-<p>💥 暴力表現: ${aiRating.violence} / 5</p>
-<p>❤️ 性的表現: ${aiRating.sexual} / 5</p>
-<p>🩸 グロ表現: ${aiRating.gore} / 5</p>
+<p style="font-size:18px; margin:10px 0;">
+💥 ${aiRating.violence}/5　
+❤️ ${aiRating.sexual}/5　
+🩸 ${aiRating.gore}/5
+</p>
 
 <p style="font-size:12px;color:#999;">
 ※AIによる参考評価
@@ -828,7 +830,6 @@ AI評価データ準備中
 </p>
 `
 }
-
 <div
   style="
     margin-top:10px;
