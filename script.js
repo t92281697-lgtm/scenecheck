@@ -667,8 +667,6 @@ font-size:20px;
 </div>
 `;
 
-const language = ...
-
   const language =
   document.getElementById("language").value;
 
