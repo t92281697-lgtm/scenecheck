@@ -819,26 +819,7 @@ margin-bottom:15px;
 
 <div class="movie-info">
 
-  <button onclick="showSearchResults()"
-style="
-padding:10px 15px;
-border:none;
-border-radius:8px;
-margin-bottom:15px;
-cursor:pointer;
-">
-← 検索に戻る
-</button>
-
-<div class="movie-top">
-
-<img
-class="movie-poster"
-src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
->
-
-<div class="movie-info">
-
+  
 <h1 style="margin-bottom:10px;">
 ${movie.title}
 </h1>
