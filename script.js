@@ -577,12 +577,11 @@ async function searchMovie(query) {
   data.results.slice(0,20).forEach(movie => {
 
  moviesDiv.innerHTML += `
-  <div class="card" onclick="showMovie('${movie.id}')">
+  <div class="card movie-card" onclick="showMovie('${movie.id}')">
 
-    <img
-      src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
-      style="width:100%; border-radius:10px; margin-bottom:10px;"
-    >
+   <img
+  src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+>
 
     <h2>${movie.title}</h2>
 
