@@ -666,7 +666,7 @@ font-size:20px;
 🎬 読み込み中...
 </div>
 `;
-
+ 
   const language =
   document.getElementById("language").value;
 
