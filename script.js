@@ -794,30 +794,27 @@ detailPage.style.display = "block";
 detailPage.innerHTML = `
   <div class="card detail-card">
 
-  <div class="movie-top">
+  <button onclick="showSearchResults()"
+style="
+padding:10px 15px;
+border:none;
+border-radius:8px;
+margin-bottom:20px;
+cursor:pointer;
+">
+← 検索に戻る
+</button>
 
-   <button onclick="showSearchResults()"
-      style="
-        padding:10px 15px;
-        border:none;
-        border-radius:8px;
-        margin-bottom:20px;
-        cursor:pointer;
-      ">
-      ← 検索に戻る
-    </button>
+<div class="movie-top">
 
-  <img
-  src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
-  style="
-        width:150px;
-        max-width:100%;
-        border-radius:10px;
-        margin-bottom:15px;
-        display:block;
-        margin-left:auto;
-        margin-right:auto;
-      "
+<img
+src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+style="
+width:120px;
+max-width:100%;
+border-radius:10px;
+margin-bottom:15px;
+"
 >
 
 <div class="movie-info">
