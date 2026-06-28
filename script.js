@@ -1,3 +1,6 @@
+const searchPage = document.getElementById("searchPage");
+const detailPage = document.getElementById("detailPage");
+
 const moviesDiv =
 document.getElementById("movies");
 
