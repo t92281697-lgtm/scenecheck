@@ -810,7 +810,7 @@ detailPage.innerHTML = `
   <img
   src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
   style="
-        width:120px;
+        width:150px;
         max-width:100%;
         border-radius:10px;
         margin-bottom:15px;
