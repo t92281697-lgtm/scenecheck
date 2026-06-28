@@ -129,11 +129,18 @@ font-size:15px;
 @media (max-width:768px){
 
 .movie-top{
-    flex-direction:column;
+    display:flex;
+    flex-direction:row;
+    gap:12px;
+    align-items:flex-start;
+}
+
+.movie-top img{
+    width:120px !important;
 }
 
 .movie-info{
-    width:100%;
+    flex:1;
 }
 
 }
