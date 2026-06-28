@@ -118,7 +118,7 @@ font-size:15px;
 
 .movie-top{
     display:flex;
-    gap:25px;
+    gap:30px;
     align-items:flex-start;
 }
 
@@ -136,7 +136,8 @@ font-size:15px;
 }
 
 .movie-top img{
-    width:120px !important;
+    width:110px !important;
+    flex-shrink:0;
 }
 
 .movie-info{
