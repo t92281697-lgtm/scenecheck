@@ -773,6 +773,8 @@ const trailer = videos.results.find(
 moviesDiv.innerHTML = `
   <div class="card">
 
+  <div class="movie-top">
+
    <button onclick="showSearchResults()"
       style="
         padding:10px 15px;
@@ -796,6 +798,8 @@ moviesDiv.innerHTML = `
         margin-right:auto;
       "
 >
+
+<div class="movie-info">
 
     <h1>${movie.title}</h1>
 
@@ -966,8 +970,11 @@ AI評価データ準備中
   }
 </div>
 
+</div> <!-- movie-info -->
 
-  </div>
+</div> <!-- movie-top -->
+
+</div> <!-- card -->
 `;
 
 }
