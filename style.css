@@ -150,3 +150,11 @@ font-size:15px;
     margin:auto;
 }
 
+.movie-card img{
+    width:100%;
+    aspect-ratio:2/3;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
