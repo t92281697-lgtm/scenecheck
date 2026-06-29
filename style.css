@@ -135,6 +135,12 @@ font-size:15px;
     align-items:flex-start;
 }
 
+.movie-poster{
+    width:240px;
+    border-radius:12px;
+    display:block;
+}
+
 .movie-top img{
     width:110px !important;
     flex-shrink:0;
