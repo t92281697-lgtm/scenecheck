@@ -809,12 +809,7 @@ cursor:pointer;
 
 <img
 src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
-style="
-width:120px;
-max-width:100%;
-border-radius:10px;
-margin-bottom:15px;
-"
+class="movie-poster"
 >
 
 <div class="movie-info">
