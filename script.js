@@ -865,23 +865,7 @@ border-radius:8px;
 
 </div>
 
-</div>
-
-   <div style="margin:15px 0; line-height:1.8;">
-
-<p>
-⭐ ${movie.vote_average.toFixed(1)}　
-🎭 ${genres}
-</p>
-
-<p>
-⏱️ ${movie.runtime}分　
-📅 ${movie.release_date}
-</p>
-
-</div>
-
-   
+</div>   
 
     <hr style="margin:20px 0; border-color:#333;">
 
