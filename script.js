@@ -846,6 +846,91 @@ margin-bottom:15px;
 🎟️ TMDBレーティング: ${certification}
 </p>
 
+<h3 style="margin-top:20px;">🤖 AI推定評価</h3>
+
+${
+aiRating
+? `
+<p style="font-size:18px; margin:10px 0;">
+💥 ${aiRating.violence}/5　
+❤️ ${aiRating.sexual}/5　
+🩸 ${aiRating.gore}/5
+</p>
+
+<div style="
+margin-top:10px;
+padding:12px;
+background:#222;
+border-radius:10px;
+">
+
+<h3>🎬 SceneCheck推奨年齢</h3>
+
+<p style="font-size:20px;">
+🔞 ${ageRating}
+</p>
+
+<p style="margin-top:10px;">
+${ageReason}
+</p>
+
+<p style="font-size:12px;color:#999;">
+※SceneCheck独自基準
+</p>
+
+</div>
+`
+:
+`
+<p style="color:#888;">
+AI評価データなし
+</p>
+`
+}
+
+<hr style="margin:20px 0; border-color:#333;">
+
+<h3>⚠️ SceneCheck評価</h3>
+
+<p><strong>暴力表現</strong></p>
+<select id="violence">
+  <option>1 - ほぼなし</option>
+  <option>2 - 少しあり</option>
+  <option>3 - 普通</option>
+  <option>4 - 強い</option>
+  <option>5 - 非常に強い</option>
+</select>
+
+<br><br>
+
+<p><strong>性的表現</strong></p>
+<select id="sexual">
+  <option>1 - ほぼなし</option>
+  <option>2 - 軽いキスや下ネタ</option>
+  <option>3 - 露出またはベッドシーン示唆</option>
+  <option>4 - 明確な性描写</option>
+  <option>5 - 非常に露骨</option>
+</select>
+
+<br><br>
+
+<p><strong>グロ表現</strong></p>
+<select id="gore">
+  <option>1 - なし</option>
+  <option>2 - 軽い流血</option>
+  <option>3 - 傷や死体が見える</option>
+  <option>4 - 内臓・切断描写あり</option>
+  <option>5 - 非常に生々しい</option>
+</select>
+
+<br><br>
+
+<button onclick="submitRating()">
+  評価を送信
+</button>
+
+<div id="ratingResult" style="margin-top:20px;">
+
 ${trailer ? `
 <a
 href="https://www.youtube.com/watch?v=${trailer.key}"
@@ -903,48 +988,7 @@ ${movie.overview || "あらすじなし"}
         : "不明"
     }</p>
 
-<hr style="margin:20px 0; border-color:#333;">
 
-<h3>⚠️ SceneCheck評価</h3>
-
-<p><strong>暴力表現</strong></p>
-<select id="violence">
-  <option>1 - ほぼなし</option>
-  <option>2 - 少しあり</option>
-  <option>3 - 普通</option>
-  <option>4 - 強い</option>
-  <option>5 - 非常に強い</option>
-</select>
-
-<br><br>
-
-<p><strong>性的表現</strong></p>
-<select id="sexual">
-  <option>1 - ほぼなし</option>
-  <option>2 - 軽いキスや下ネタ</option>
-  <option>3 - 露出またはベッドシーン示唆</option>
-  <option>4 - 明確な性描写</option>
-  <option>5 - 非常に露骨</option>
-</select>
-
-<br><br>
-
-<p><strong>グロ表現</strong></p>
-<select id="gore">
-  <option>1 - なし</option>
-  <option>2 - 軽い流血</option>
-  <option>3 - 傷や死体が見える</option>
-  <option>4 - 内臓・切断描写あり</option>
-  <option>5 - 非常に生々しい</option>
-</select>
-
-<br><br>
-
-<button onclick="submitRating()">
-  評価を送信
-</button>
-
-<div id="ratingResult" style="margin-top:20px;">
   ${
     savedRating
       ? `
