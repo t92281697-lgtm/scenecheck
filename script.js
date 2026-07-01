@@ -930,27 +930,17 @@ AI評価データなし
 </button>
 
 <div id="ratingResult" style="margin-top:20px;">
-
-${trailer ? `
-<a
-href="https://www.youtube.com/watch?v=${trailer.key}"
-target="_blank"
-style="
-display:inline-block;
-padding:10px 15px;
-background:#e50914;
-color:white;
-text-decoration:none;
-border-radius:8px;
-"
->
-▶ 予告編を見る
-</a>
-` : ""}
-
+${
+savedRating
+? `
+<h3>あなたの評価</h3>
+<p>💥 暴力表現: ${savedRating.violence}</p>
+<p>❤️ 性的表現: ${savedRating.sexual}</p>
+<p>🩸 グロ表現: ${savedRating.gore}</p>
+`
+: ""
+}
 </div>
-
-</div>   
 
     <hr style="margin:20px 0; border-color:#333;">
 
@@ -1024,10 +1014,7 @@ const gore =
 document.getElementById("gore").selectedIndex + 1;
 
 document.getElementById("ratingResult").innerHTML = `
-  <h3>あなたの評価</h3>
-  <p>💥 暴力表現: ${violence}</p>
-  <p>❤️ 性的表現: ${sexual}</p>
-  <p>🩸 グロ表現: ${gore}</p>
+ 
 `;
 
 localStorage.setItem(
