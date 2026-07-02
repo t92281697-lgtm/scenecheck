@@ -4,7 +4,11 @@ const detailPage = document.getElementById("detailPage");
 const moviesDiv =
 document.getElementById("movies");
 
-let currentResults = [];
+let personMovies = [];      // 全作品
+let currentResults = [];    // 表示済み
+
+let currentPersonPage = 1;
+let currentPersonName = "";
 
 const API_KEY = "11098d35652f534fcb8f75ad72907603";
 
@@ -944,14 +948,18 @@ if (personData.results.length > 0){
 
 const person = personData.results[0];
 
+currentPersonPage = 1;
+currentPersonName = person.name;
+
 const creditsResponse = await fetch(
 `https://api.themoviedb.org/3/person/${person.id}/movie_credits?api_key=${API_KEY}&language=${language}`
 );
 
 const creditsData = await creditsResponse.json();
 
-creditsData.cast
-.sort((a,b)=>b.popularity-a.popularity)
+currentResults = creditsData.cast
+.sort((a,b)=>b.popularity-a.popularity);
+currentResults
 .slice(0,20)
 .forEach(movie=>{
 
