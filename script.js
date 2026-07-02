@@ -624,7 +624,129 @@ const aiRatings = {
 
 184315: { violence: 4, sexual: 2, gore: 3 }, // ヘラクレス
 
-10159: { violence: 3, sexual: 2, gore: 2 } // ランダウン ロッキング・ザ・アマゾン
+10159: { violence: 3, sexual: 2, gore: 2 }, // ランダウン ロッキング・ザ・アマゾン
+
+181812: { violence: 4, sexual: 1, gore: 2 }, // DUNE／デューン 砂の惑星
+
+693134: { violence: 5, sexual: 2, gore: 3 }, // デューン 砂の惑星 PART2
+
+937287: { violence: 2, sexual: 4, gore: 1 }, // チャレンジャーズ
+
+316029: { violence: 2, sexual: 2, gore: 1 }, // グレイテスト・ショーマン
+
+379686: { violence: 2, sexual: 1, gore: 1 }, // スペース・プレイヤーズ
+
+21316: { violence: 1, sexual: 1, gore: 1 }, // Pixie Hollow Games
+
+446894: { violence: 2, sexual: 1, gore: 1 }, // スモールフット
+
+20021: { violence: 2, sexual: 1, gore: 1 }, // Duck Duck Goose
+
+77987: { violence: 1, sexual: 1, gore: 1 }, // フレネミーズ
+
+16871: { violence: 1, sexual: 1, gore: 1 }, // Super Buddies
+
+615667: { violence: 3, sexual: 5, gore: 1 }, // マルコム&マリー
+
+280217: { violence: 1, sexual: 1, gore: 1 }, // ゾーイの秘密アプリ
+
+27205: { violence: 4, sexual: 2, gore: 2 }, // インセプション
+
+272: { violence: 4, sexual: 2, gore: 2 }, // バットマン ビギンズ
+
+373571: { violence: 4, sexual: 1, gore: 2 }, // ゴジラ キング・オブ・モンスターズ
+
+124905: { violence: 4, sexual: 1, gore: 2 }, // GODZILLA ゴジラ
+
+616: { violence: 5, sexual: 2, gore: 3 }, // ラスト・サムライ
+
+335988: { violence: 4, sexual: 1, gore: 2 }, // トランスフォーマー／最後の騎士王
+
+11645: { violence: 5, sexual: 1, gore: 4 }, // 硫黄島からの手紙
+
+670292: { violence: 4, sexual: 1, gore: 3 }, // ザ・クリエイター／創世者
+
+91314: { violence: 4, sexual: 1, gore: 2 }, // トランスフォーマー／ロストエイジ
+
+447404: { violence: 2, sexual: 1, gore: 1 }, // 名探偵ピカチュウ
+
+399174: { violence: 2, sexual: 1, gore: 1 }, // 犬ヶ島
+
+1904: { violence: 2, sexual: 4, gore: 1 }, // SAYURI
+
+241257: { violence: 3, sexual: 2, gore: 2 }, // ダレン・シャン
+
+592983: { violence: 2, sexual: 1, gore: 1 }, // Fukushima 50
+
+22971: { violence: 4, sexual: 3, gore: 2 }, // シャンハイ
+
+11826: { violence: 1, sexual: 2, gore: 1 }, // タンポポ
+
+420818: { violence: 2, sexual: 1, gore: 1 }, // Kensuke's Kingdom
+
+49013: { violence: 4, sexual: 2, gore: 2 }, // ガーディアンズ: 呪われた地下宮殿
+
+334541: { violence: 1, sexual: 1, gore: 1 }, // 追憶の森
+
+1027535: { violence: 5, sexual: 2, gore: 4 }, // ゴールデンカムイ
+
+1238763: { violence: 4, sexual: 2, gore: 2 }, // アンダーニンジャ
+
+577922: { violence: 4, sexual: 1, gore: 2 }, // キングダム
+
+1272149: { violence: 5, sexual: 1, gore: 3 }, // キングダム 大将軍の帰還
+
+371645: { violence: 1, sexual: 3, gore: 1 }, // オオカミ少女と黒王子
+
+432117: { violence: 3, sexual: 2, gore: 2 }, // ジョジョの奇妙な冒険 ダイヤモンドは砕けない 第一章
+
+987917: { violence: 5, sexual: 1, gore: 3 }, // キングダム 運命の炎
+
+686422: { violence: 1, sexual: 2, gore: 1 }, // ヲタクに恋は難しい
+
+347969: { violence: 1, sexual: 2, gore: 1 }, // orange -オレンジ-
+
+612299: { violence: 3, sexual: 1, gore: 2 }, // 二ノ国
+
+724089: { violence: 5, sexual: 1, gore: 4 }, // 狂武蔵
+
+347128: { violence: 1, sexual: 3, gore: 1 }, // ヒロイン失格
+
+900667: { violence: 5, sexual: 1, gore: 3 }, // キングダム2 遥かなる大地へ
+
+456740: { violence: 2, sexual: 2, gore: 1 }, // 斉木楠雄のΨ難
+
+406997: { violence: 2, sexual: 1, gore: 1 }, // 映画 妖怪ウォッチ 空飛ぶクジラとダブル世界の大冒険だニャン！
+
+726208: { violence: 1, sexual: 1, gore: 1 }, // 夏への扉 ―キミのいる未来へ―
+
+377275: { violence: 1, sexual: 2, gore: 1 }, // 四月は君の嘘
+
+1017633: { violence: 4, sexual: 1, gore: 2 }, // 陰陽師0
+
+68444: { violence: 4, sexual: 2, gore: 2 }, // BLEACH
+
+768744: { violence: 3, sexual: 1, gore: 2 }, // 僕のヒーローアカデミア THE MOVIE ワールド ヒーローズ ミッション
+
+565770: { violence: 1, sexual: 2, gore: 1 }, // 空の青さを知る人よ
+
+547016: { violence: 4, sexual: 2, gore: 2 }, // 銀魂2 掟は破るためにこそある
+
+661374: { violence: 4, sexual: 2, gore: 2 }, // 東京リベンジャーズ
+
+121986: { violence: 3, sexual: 1, gore: 1 }, // 仮面ライダー×仮面ライダー ウィザード&フォーゼ MOVIE大戦アルティメイタム
+
+432836: { violence: 4, sexual: 2, gore: 2 }, // 銀魂
+
+293310: { violence: 1, sexual: 2, gore: 1 }, // アオハライド
+
+121988: { violence: 3, sexual: 1, gore: 1 }, // 仮面ライダーフォーゼ THE MOVIE みんなで宇宙キターッ!
+
+74627: { violence: 3, sexual: 1, gore: 1 }, // 仮面ライダー×仮面ライダー フォーゼ＆オーズ MOVIE大戦 MEGA MAX
+
+470044: { violence: 2, sexual: 4, gore: 1 }, // リバーズ・エッジ
+
+87290: { violence: 3, sexual: 1, gore: 1 } // 仮面ライダー×スーパー戦隊 スーパーヒーロー大戦
 
 
 
