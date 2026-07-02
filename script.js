@@ -745,8 +745,24 @@ const aiRatings = {
 74627: { violence: 3, sexual: 1, gore: 1 }, // 仮面ライダー×仮面ライダー フォーゼ＆オーズ MOVIE大戦 MEGA MAX
 
 470044: { violence: 2, sexual: 4, gore: 1 }, // リバーズ・エッジ
-
-87290: { violence: 3, sexual: 1, gore: 1 } // 仮面ライダー×スーパー戦隊 スーパーヒーロー大戦
+87290: { violence: 3, sexual: 1, gore: 1 }, // 仮面ライダー×スーパー戦隊 スーパーヒーロー大戦
+508883: { violence: 3, sexual: 1, gore: 2 }, // 君たちはどう生きるか
+382272: { violence: 4, sexual: 1, gore: 3 }, // デスノート Light up the NEW world
+431819: { violence: 1, sexual: 2, gore: 1 }, // 打ち上げ花火、下から見るか？横から見るか？
+410220: { violence: 2, sexual: 3, gore: 1 }, // 溺れるナイフ
+349176: { violence: 3, sexual: 1, gore: 2 }, // 暗殺教室
+188288: { violence: 3, sexual: 1, gore: 2 }, // 仮面ライダーW FOREVER AtoZ／運命のガイアメモリ
+695932: { violence: 1, sexual: 3, gore: 1 }, // 花束みたいな恋をした
+108515: { violence: 3, sexual: 1, gore: 2 }, // 仮面ライダー×仮面ライダー W＆ディケイド MOVIE大戦2010
+30617: { violence: 3, sexual: 1, gore: 2 }, // 劇場版 仮面ライダーディケイド オールライダー対大ショッカー
+519176: { violence: 4, sexual: 2, gore: 2 }, // 銀魂2 掟は破るためにこそある
+792678: { violence: 4, sexual: 1, gore: 4 }, // CUBE 一度入ったら、最後
+1244244: { violence: 4, sexual: 1, gore: 3 }, // Cloud クラウド
+432985: { violence: 4, sexual: 2, gore: 2 }, // 銀魂
+359628: { violence: 3, sexual: 1, gore: 2 }, // 暗殺教室 卒業編
+808667: { violence: 5, sexual: 2, gore: 4 }, // キャラクター
+188198: { violence: 3, sexual: 1, gore: 2 }, // 仮面ライダー×仮面ライダー フォーゼ＆オーズ MOVIE大戦 MEGA MAX
+35069: { violence: 3, sexual: 1, gore: 2 }, // オーズ・電王・オールライダー レッツゴー仮面ライダー
 
 
 
