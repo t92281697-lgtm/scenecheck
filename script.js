@@ -1004,17 +1004,6 @@ movie.budget
 
 </details>
 
-
-  ${
-    savedRating
-      ? `
-        <h3>あなたの評価</h3>
-        <p>💥 暴力表現: ${savedRating.violence}</p>
-        <p>❤️ 性的表現: ${savedRating.sexual}</p>
-        <p>🩸 グロ表現: ${savedRating.gore}</p>
-      `
-      : ""
-  }
 </div>
 
 </div> <!-- movie-info -->
