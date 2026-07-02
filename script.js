@@ -944,6 +944,25 @@ savedRating
 
     <hr style="margin:20px 0; border-color:#333;">
 
+    ${trailer ? `
+<p style="margin-top:20px;">
+<a
+href="https://www.youtube.com/watch?v=${trailer.key}"
+target="_blank"
+style="
+display:inline-block;
+padding:10px 15px;
+background:#e50914;
+color:white;
+text-decoration:none;
+border-radius:8px;
+"
+>
+▶ 予告編を見る
+</a>
+</p>
+` : ""}
+
    <details style="margin-top:15px;">
 
 <summary style="cursor:pointer;font-size:18px;">
