@@ -762,7 +762,7 @@ const aiRatings = {
 359628: { violence: 3, sexual: 1, gore: 2 }, // 暗殺教室 卒業編
 808667: { violence: 5, sexual: 2, gore: 4 }, // キャラクター
 188198: { violence: 3, sexual: 1, gore: 2 }, // 仮面ライダー×仮面ライダー フォーゼ＆オーズ MOVIE大戦 MEGA MAX
-35069: { violence: 3, sexual: 1, gore: 2 } // オーズ・電王・オールライダー レッツゴー仮面ライダー
+35069: { violence: 3, sexual: 1, gore: 2 }, // オーズ・電王・オールライダー レッツゴー仮面ライダー
 10643: { violence: 4, sexual: 1, gore: 3 }, // ゴジラ2000 ミレニアム
 114372: { violence: 5, sexual: 1, gore: 4 }, // 真救世主伝説 北斗の拳 ラオウ伝 激闘の章
 25050: { violence: 1, sexual: 1, gore: 1 }, // 歩いても 歩いても
