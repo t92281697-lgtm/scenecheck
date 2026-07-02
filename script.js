@@ -877,6 +877,8 @@ AI評価データなし
 
 <hr style="margin:20px 0; border-color:#333;">
 
+<div class="vote-box">
+ 
 <h3>⚠️ SceneCheck評価</h3>
 
 <p><strong>暴力表現</strong></p>
@@ -928,7 +930,7 @@ savedRating
 : ""
 }
 </div>
-
+ 
     <hr style="margin:20px 0; border-color:#333;">
 
     ${trailer ? `
@@ -974,15 +976,25 @@ ${movie.overview || "あらすじなし"}
 
 </details>
 
-     <p>🌍 ${movie.production_countries.map(c => c.name).join(" / ")}</p>
+   <details style="margin-top:20px;">
 
-    <p>🏢 ${movie.production_companies.map(c => c.name).join(" / ")}</p>
+<summary style="cursor:pointer;font-size:18px;">
+📚 詳細情報
+</summary>
 
-    <p>💰 ${
-      movie.budget
-        ? "$" + movie.budget.toLocaleString()
-        : "不明"
-    }</p>
+<p>🌍 ${movie.production_countries.map(c => c.name).join(" / ")}</p>
+
+<p>🏢 ${movie.production_companies.map(c => c.name).join(" / ")}</p>
+
+<p>
+💰 ${
+movie.budget
+? "$" + movie.budget.toLocaleString()
+: "不明"
+}
+</p>
+
+</details>
 
 
   ${
