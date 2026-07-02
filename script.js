@@ -800,7 +800,119 @@ const aiRatings = {
 52588: { violence: 1, sexual: 1, gore: 1 }, // 包帯クラブ
 545143: { violence: 2, sexual: 2, gore: 1 }, // 響 -HIBIKI-
 382258: { violence: 2, sexual: 3, gore: 1 }, // ピンクとグレー
-29975: { violence: 1, sexual: 3, gore: 1 } // シュガー＆スパイス ～風味絶佳～
+29975: { violence: 1, sexual: 3, gore: 1 }, // シュガー＆スパイス ～風味絶佳～
+1553969: { violence: 2, sexual: 2, gore: 1 }, // 箱の中の羊
+19486: { violence: 2, sexual: 3, gore: 1 }, // 僕の彼女はサイボーグ
+19506: { violence: 4, sexual: 1, gore: 3 }, // ICHI
+39544: { violence: 2, sexual: 1, gore: 1 }, // ホッタラケの島 ～遥と魔法の鏡～
+990365: { violence: 4, sexual: 2, gore: 3 }, // レジェンド＆バタフライ
+46361: { violence: 2, sexual: 2, gore: 1 }, // ザ・マジックアワー
+28830: { violence: 1, sexual: 2, gore: 1 }, // おっぱいバレー
+147999: { violence: 1, sexual: 1, gore: 1 }, // あなたへ
+180891: { violence: 2, sexual: 2, gore: 2 }, // リアル〜完全なる首長竜の日〜
+18733: { violence: 1, sexual: 1, gore: 1 }, // ハッピーフライト
+1593275: { violence: 1, sexual: 1, gore: 1 }, // 人はなぜラブレターを書くのか
+380246: { violence: 1, sexual: 2, gore: 1 }, // ギャラクシー街道
+706566: { violence: 4, sexual: 2, gore: 2 }, // 劇場版 奥様は、取り扱い注意
+33029: { violence: 4, sexual: 1, gore: 2 }, // 戦国自衛隊1549
+315011: { violence: 5, sexual: 1, gore: 4 }, // シン・ゴジラ
+295830: { violence: 5, sexual: 2, gore: 4 }, // 進撃の巨人 ATTACK ON TITAN
+340382: { violence: 5, sexual: 2, gore: 5 }, // 進撃の巨人 ATTACK ON TITAN エンド オブ ザ ワールド
+88557: { violence: 2, sexual: 1, gore: 1 }, // 劇場版ポケットモンスター ベストウイッシュ ビクティニと黒き英雄 ゼクロム
+115223: { violence: 2, sexual: 1, gore: 1 }, // 劇場版ポケットモンスター ベストウイッシュ ビクティニと白き英雄 レシラム
+74842: { violence: 4, sexual: 1, gore: 3 }, // 鬼神伝
+140441: { violence: 3, sexual: 2, gore: 4 }, // 貞子3D
+257527: { violence: 3, sexual: 2, gore: 4 }, // 貞子3D2
+1276108: { violence: 2, sexual: 1, gore: 2 }, // ラストマイル
+224560: { violence: 2, sexual: 3, gore: 2 }, // 人間失格
+565241: { violence: 2, sexual: 1, gore: 1 }, // 氷点
+461211: { violence: 4, sexual: 2, gore: 3 }, // 忍びの国
+619162: { violence: 2, sexual: 1, gore: 1 }, // 決算！忠臣蔵
+785534: { violence: 1, sexual: 1, gore: 1 }, // そして、バトンは渡された
+436969: { violence: 3, sexual: 2, gore: 3 }, // MONSTERZ モンスターズ
+315465: { violence: 3, sexual: 1, gore: 2 }, // バケモノの子
+614587: { violence: 3, sexual: 1, gore: 2 }, // ルパン三世 THE FIRST
+1101179: { violence: 1, sexual: 2, gore: 1 }, // 片思い世界
+1337985: { violence: 1, sexual: 2, gore: 1 }, // 遠い山なみの光
+447180: { violence: 1, sexual: 2, gore: 1 }, // 先生！、、、好きになってもいいですか？
+669663: { violence: 2, sexual: 1, gore: 1 }, // 一度死んでみた
+434775: { violence: 3, sexual: 2, gore: 2 }, // 三度目の殺人
+434236: { violence: 1, sexual: 1, gore: 1 }, // チア☆ダン～女子高生がチアダンスで全米制覇しちゃったホントの話～
+517065: { violence: 2, sexual: 2, gore: 1 }, // SUNNY 強い気持ち・強い愛
+731015: { violence: 2, sexual: 1, gore: 2 }, // いのちの停車場
+489891: { violence: 3, sexual: 1, gore: 2 }, // ラプラスの魔女
+1370709: { violence: 1, sexual: 2, gore: 1 }, // アット・ザ・ベンチ
+849786: { violence: 2, sexual: 3, gore: 2 }, // 流浪の月
+1115577: { violence: 2, sexual: 2, gore: 1 }, // キリエのうた
+408574: { violence: 2, sexual: 1, gore: 1 }, // ちはやふる 下の句
+940721: { violence: 5, sexual: 1, gore: 4 }, // ゴジラ-1.0
+604605: { violence: 2, sexual: 2, gore: 1 }, // HELLO WORLD
+662638: { violence: 3, sexual: 1, gore: 2 }, // 名探偵コナン 緋色の弾丸
+1340355: { violence: 4, sexual: 1, gore: 2 }, // アンダーニンジャ
+1381071: { violence: 3, sexual: 1, gore: 2 }, // ゴジラ-0.0
+433157: { violence: 2, sexual: 1, gore: 1 }, // ワンピース～ハート オブ ゴールド～
+813477: { violence: 5, sexual: 1, gore: 3 }, // シン・仮面ライダー
+1559123: { violence: 1, sexual: 1, gore: 1 }, // ほどなく、お別れです
+449132: { violence: 1, sexual: 3, gore: 1 }, // 君の膵臓をたべたい
+527281: { violence: 1, sexual: 2, gore: 1 }, // センセイ君主
+433128: { violence: 5, sexual: 1, gore: 4 }, // 亜人
+564251: { violence: 2, sexual: 2, gore: 1 }, // 映画 賭󠄀ケグルイ
+624812: { violence: 1, sexual: 2, gore: 1 }, // 思い、思われ、ふり、ふられ
+923837: { violence: 1, sexual: 2, gore: 1 }, // やがて海へと届く
+991190: { violence: 2, sexual: 1, gore: 1 }, // 金の国 水の国
+507612: { violence: 1, sexual: 2, gore: 1 }, // となりの怪物くん
+742396: { violence: 3, sexual: 2, gore: 1 }, // 映画 賭󠄀ケグルイ 絶体絶命ロシアンルーレット
+1317132: { violence: 2, sexual: 1, gore: 1 }, // 六人の嘘つきな大学生
+672322: { violence: 5, sexual: 2, gore: 4 }, // るろうに剣心 最終章 The Beginning
+602063: { violence: 5, sexual: 2, gore: 4 }, // るろうに剣心 最終章 The Final
+242828: { violence: 2, sexual: 1, gore: 1 }, // 思い出のマーニー
+1024621: { violence: 1, sexual: 2, gore: 1 }, // ちひろさん
+276624: { violence: 5, sexual: 2, gore: 5 }, // アイアムアヒーロー
+349498: { violence: 1, sexual: 1, gore: 1 }, // ビリギャル
+592867: { violence: 3, sexual: 1, gore: 2 }, // ドラゴンクエスト ユア・ストーリー
+1369010: { violence: 2, sexual: 1, gore: 1 }, // ブラック・ショーマン
+455954: { violence: 4, sexual: 2, gore: 3 }, // 関ヶ原
+482847: { violence: 2, sexual: 2, gore: 1 }, // 世にも奇妙な物語 25周年記念！秋の2週連続SP～傑作復活編～
+526384: { violence: 1, sexual: 2, gore: 1 }, // コーヒーが冷めないうちに
+379300: { violence: 3, sexual: 1, gore: 2 }, // 僕だけがいない街
+821103: { violence: 1, sexual: 1, gore: 1 }, // バイプレイヤーズ もしも100人の名脇役が映画を作ったら
+254304: { violence: 2, sexual: 2, gore: 1 }, // 女子ーズ
+283831: { violence: 1, sexual: 2, gore: 1 }, // ストロボ・エッジ
+472307: { violence: 1, sexual: 3, gore: 1 }, // ナラタージュ
+1404791: { violence: 4, sexual: 1, gore: 3 }, // ドールハウス
+634429: { violence: 5, sexual: 1, gore: 3 }, // シン・ウルトラマン
+420426: { violence: 4, sexual: 1, gore: 3 }, // BLEACH
+83389: { violence: 1, sexual: 1, gore: 1 }, // コクリコ坂から
+602666: { violence: 3, sexual: 1, gore: 2 }, // 唐人街探偵 東京MISSION
+15767: { violence: 5, sexual: 1, gore: 4 }, // ゴジラ ファイナルウォーズ
+495925: { violence: 2, sexual: 1, gore: 1 }, // 映画ドラえもん のび太の宝島
+698860: { violence: 4, sexual: 2, gore: 3 }, // MOTHER マザー
+1469857: { violence: 2, sexual: 1, gore: 1 }, // おーい、応為
+1451398: { violence: 4, sexual: 1, gore: 4 }, // カラダ探し THE LAST NIGHT
+1122634: { violence: 3, sexual: 1, gore: 2 }, // 赤ずきん、旅の途中で死体と出会う。
+991814: { violence: 4, sexual: 1, gore: 4 }, // カラダ探し
+1511675: { violence: 5, sexual: 1, gore: 4 }, // キングダム 魂の決戦
+1145291: { violence: 4, sexual: 1, gore: 3 }, // 禁じられた遊び
+1001196: { violence: 1, sexual: 1, gore: 1 }, // 舞台『千と千尋の神隠し』
+447185: { violence: 3, sexual: 1, gore: 1 }, // 斉木楠雄のΨ難
+566387: { violence: 2, sexual: 2, gore: 2 }, // 十二人の死にたい子どもたち
+1029486: { violence: 1, sexual: 1, gore: 1 }, // 湯道
+378491: { violence: 3, sexual: 2, gore: 2 }, // セーラー服と機関銃 －卒業－
+1718699: { violence: 2, sexual: 1, gore: 1 }, // Not Alone
+1317288: { violence: 2, sexual: 2, gore: 1 }, // マーティ・シュプリーム 世界をつかめ
+398818: { violence: 2, sexual: 3, gore: 1 }, // 君の名前で僕を呼んで
+391713: { violence: 2, sexual: 2, gore: 1 }, // レディ・バード
+331482: { violence: 2, sexual: 2, gore: 1 }, // ストーリー・オブ・マイライフ／わたしの若草物語
+1170608: { violence: 4, sexual: 1, gore: 3 }, // デューン 砂の惑星 PART3
+787699: { violence: 2, sexual: 1, gore: 1 }, // ウォンカとチョコレート工場のはじまり
+646380: { violence: 2, sexual: 2, gore: 1 }, // ドント・ルック・アップ
+661539: { violence: 2, sexual: 2, gore: 1 }, // 名もなき者／A COMPLETE UNKNOWN
+1634949: { violence: 2, sexual: 1, gore: 1 }, // Lorne
+791177: { violence: 5, sexual: 4, gore: 5 }, // ボーンズ アンド オール
+384680: { violence: 4, sexual: 1, gore: 4 }, // 荒野の誓い
+451915: { violence: 2, sexual: 2, gore: 1 }, // ビューティフル・ボーイ
+504949: { violence: 5, sexual: 2, gore: 4 }, // キング
+542178: { violence: 2, sexual: 2, gore: 1 } // フレンチ・ディスパッチ ザ・リバティ、カンザス・イヴニング・サン別冊
 
 
 
