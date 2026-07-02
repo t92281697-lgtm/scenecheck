@@ -862,6 +862,25 @@ margin-bottom:15px;
 🎟️ TMDBレーティング: ${certification}
 </p>
 
+<h3 style="margin-top:20px;">🤖 AI推定評価</h3>
+
+${
+aiRating
+? `
+<p style="font-size:18px; margin:10px 0;">
+💥 ${aiRating.violence}/5　
+❤️ ${aiRating.sexual}/5　
+🩸 ${aiRating.gore}/5
+</p>
+`
+:
+`
+<p style="color:#888;">
+AI評価データなし
+</p>
+`
+}
+
 
 </p>
 
