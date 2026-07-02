@@ -930,6 +930,8 @@ savedRating
 : ""
 }
 </div>
+
+</div>
  
     <hr style="margin:20px 0; border-color:#333;">
 
