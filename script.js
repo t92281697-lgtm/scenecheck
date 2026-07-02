@@ -819,6 +819,24 @@ class="movie-poster"
 ${movie.title}
 </h1>
 
+<div class="scenecheck-box">
+
+<h2>🔞 SceneCheck推奨年齢</h2>
+
+<p class="scene-age">
+${ageRating}
+</p>
+
+<p>
+${ageReason}
+</p>
+
+<p style="font-size:12px;color:#999;">
+※ SceneCheck独自基準
+</p>
+
+</div>
+
 <div style="
 display:flex;
 flex-wrap:wrap;
@@ -828,8 +846,6 @@ font-size:14px;
 ">
 
 <span>⭐ ${movie.vote_average.toFixed(1)}</span>
-
-<span>🔞 ${ageRating}</span>
 
 <span>⏱ ${movie.runtime}分</span>
 
@@ -846,36 +862,7 @@ margin-bottom:15px;
 🎟️ TMDBレーティング: ${certification}
 </p>
 
-<h3 style="margin-top:20px;">🤖 AI推定評価</h3>
 
-${
-aiRating
-? `
-<p style="font-size:18px; margin:10px 0;">
-💥 ${aiRating.violence}/5　
-❤️ ${aiRating.sexual}/5　
-🩸 ${aiRating.gore}/5
-</p>
-
-<div style="
-margin-top:10px;
-padding:12px;
-background:#222;
-border-radius:10px;
-">
-
-<h3>🎬 SceneCheck推奨年齢</h3>
-
-<p style="font-size:20px;">
-🔞 ${ageRating}
-</p>
-
-<p style="margin-top:10px;">
-${ageReason}
-</p>
-
-<p style="font-size:12px;color:#999;">
-※SceneCheck独自基準
 </p>
 
 </div>
