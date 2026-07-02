@@ -5,10 +5,11 @@ const moviesDiv =
 document.getElementById("movies");
 
 let personMovies = [];      // 全作品
-let currentResults = [];    // 表示済み
+let currentResults = [];    // 現在表示中
 
 let currentPersonPage = 1;
 let currentPersonName = "";
+let isPersonSearch = false;
 
 const API_KEY = "11098d35652f534fcb8f75ad72907603";
 
@@ -957,11 +958,14 @@ const creditsResponse = await fetch(
 
 const creditsData = await creditsResponse.json();
 
-currentResults = creditsData.cast
+personMovies = creditsData.cast
 .sort((a,b)=>b.popularity-a.popularity);
-currentResults
-.slice(0,20)
-.forEach(movie=>{
+
+currentResults = personMovies.slice(0,20);
+
+isPersonSearch = true;
+
+currentResults.forEach(movie=>{
 
 if(!movie.poster_path) return;
 
@@ -990,6 +994,18 @@ movie.release_date
 `;
 
 });
+
+if(personMovies.length>20){
+
+moviesDiv.innerHTML+=`
+<div style="text-align:center;margin:30px;">
+<button id="loadMoreButton" onclick="loadMoreMovies()">
+さらに見る
+</button>
+</div>
+`;
+
+}
 
 return;
 
@@ -1461,6 +1477,57 @@ localStorage.setItem(
     gore
   })
 );
+
+}
+
+function loadMoreMovies(){
+
+currentPersonPage++;
+
+const start=(currentPersonPage-1)*20;
+const end=start+20;
+
+const more=personMovies.slice(start,end);
+
+more.forEach(movie=>{
+
+if(!movie.poster_path) return;
+
+moviesDiv.innerHTML+=`
+<div class="card movie-card" onclick="showMovie('${movie.id}')">
+
+<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+
+<h2>${movie.title}</h2>
+
+<p style="color:#888;font-size:12px;">
+${currentPersonName}出演
+</p>
+
+<p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
+
+<p>📅 ${movie.release_date ? movie.release_date.substring(0,4) : "不明"}</p>
+
+</div>
+`;
+
+});
+
+const btn=document.querySelector("#loadMoreButton");
+
+if(btn) btn.parentElement.remove();
+
+if(personMovies.length>end){
+
+moviesDiv.innerHTML+=`
+<div style="text-align:center;margin:30px;">
+<button id="loadMoreButton" onclick="loadMoreMovies()">
+さらに見る
+</button>
+</div>
+`;
+
+}
 
 }
 
