@@ -552,7 +552,13 @@ const aiRatings = {
 
 949423: { violence: 5, sexual: 4, gore: 4 }, // Pearl
 
-760104: { violence: 5, sexual: 4, gore: 4 } // X
+760104: { violence: 5, sexual: 4, gore: 4 }, // X
+
+303991: { violence: 2, sexual: 1, gore: 1 }, // 雨の日は会えない、晴れた日は君を想う
+
+242582: { violence: 3, sexual: 2, gore: 2 }, // ナイトクローラー
+
+45612: { violence: 3, sexual: 1, gore: 2 } // ミッション:8ミニッツ
 
 
 
