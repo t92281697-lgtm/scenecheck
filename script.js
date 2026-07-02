@@ -961,6 +961,8 @@ const creditsData = await creditsResponse.json();
 personMovies = creditsData.cast
 .sort((a,b)=>b.popularity-a.popularity);
 
+ console.log(personMovies.length);
+
 currentResults = personMovies.slice(0,20);
 
 isPersonSearch = true;
