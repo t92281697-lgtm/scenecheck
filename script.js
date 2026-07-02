@@ -965,10 +965,6 @@ currentResults
 
 if(!movie.poster_path) return;
 
-if(currentResults.some(m=>m.id===movie.id)) return;
-
-currentResults.push(movie);
-
 moviesDiv.innerHTML += `
 <div class="card movie-card" onclick="showMovie('${movie.id}')">
 
@@ -994,6 +990,8 @@ movie.release_date
 `;
 
 });
+
+return;
 
 }
  
