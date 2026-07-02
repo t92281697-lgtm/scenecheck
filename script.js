@@ -872,8 +872,6 @@ aiRating
 ❤️ ${aiRating.sexual}/5　
 🩸 ${aiRating.gore}/5
 </p>
-
-</div>
 `
 :
 `
