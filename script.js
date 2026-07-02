@@ -580,6 +580,68 @@ async function searchMovie(query) {
 
   moviesDiv.innerHTML = "";
 
+ if (data.results.length === 0) {
+
+  const personResponse = await fetch(
+    `https://api.themoviedb.org/3/search/person?api_key=${API_KEY}&language=${language}&query=${encodeURIComponent(query)}`
+  );
+
+  const personData = await personResponse.json();
+
+  if (personData.results.length > 0) {
+
+    const person = personData.results[0];
+
+    const creditsResponse = await fetch(
+      `https://api.themoviedb.org/3/person/${person.id}/movie_credits?api_key=${API_KEY}&language=${language}`
+    );
+
+    const creditsData = await creditsResponse.json();
+
+    currentResults = creditsData.cast;
+
+    moviesDiv.innerHTML = "";
+
+    creditsData.cast
+      .sort((a,b)=>b.popularity-a.popularity)
+      .slice(0,20)
+      .forEach(movie=>{
+
+        if(!movie.poster_path) return;
+
+        moviesDiv.innerHTML += `
+        <div class="card movie-card" onclick="showMovie('${movie.id}')">
+
+          <img
+          src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+
+          <h2>${movie.title}</h2>
+
+          <p style="color:#888;font-size:12px;">
+          ${person.name}出演
+          </p>
+
+          <p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
+
+          <p>
+          📅 ${
+            movie.release_date
+            ? movie.release_date.substring(0,4)
+            : "不明"
+          }
+          </p>
+
+        </div>
+        `;
+
+      });
+
+    return;
+
+  }
+
+}
+
   data.results.slice(0,20).forEach(movie => {
 
  moviesDiv.innerHTML += `
