@@ -560,6 +560,72 @@ const aiRatings = {
 
 45612: { violence: 3, sexual: 1, gore: 2 } // ミッション:8ミニッツ
 
+146233: { violence: 5, sexual: 1, gore: 4 }, // プリズナーズ
+
+523638: { violence: 5, sexual: 3, gore: 4 }, // プリズナーズ・オブ・ゴーストランド
+
+1122573: { violence: 5, sexual: 1, gore: 3 }, // グレイ・ミッション
+
+359410: { violence: 5, sexual: 2, gore: 4 }, // ロードハウス
+
+1949: { violence: 4, sexual: 1, gore: 2 }, // ゾディアック
+
+9549: { violence: 4, sexual: 2, gore: 2 }, // プリンス・オブ・ペルシャ
+
+77016: { violence: 5, sexual: 2, gore: 4 }, // エンド・オブ・ウォッチ
+
+181886: { violence: 4, sexual: 3, gore: 2 }, // 複製された男
+
+142: { violence: 2, sexual: 4, gore: 1 }, // ブロークバック・マウンテン
+
+43347: { violence: 1, sexual: 4, gore: 1 }, // ラブ & ドラッグ
+
+307081: { violence: 5, sexual: 2, gore: 3 }, // サウスポー
+
+395992: { violence: 4, sexual: 1, gore: 4 }, // ライフ
+
+7445: { violence: 4, sexual: 2, gore: 3 }, // マイ・ブラザー
+
+435: { violence: 2, sexual: 1, gore: 1 }, // デイ・アフター・トゥモロー
+
+141: { violence: 3, sexual: 2, gore: 2 }, // ドニー・ダーコ
+
+882569: { violence: 5, sexual: 1, gore: 3 }, // コヴェナント／約束の救出
+
+877269: { violence: 2, sexual: 1, gore: 1 }, // ストレンジ・ワールド／もうひとつの世界
+
+45612: { violence: 3, sexual: 2, gore: 2 }, // ミッション：8ミニッツ
+
+13466: { violence: 1, sexual: 1, gore: 1 }, // October Sky
+
+254128: { violence: 4, sexual: 1, gore: 2 }, // カリフォルニア・ダウン
+
+1241982: { violence: 2, sexual: 1, gore: 1 }, // モアナと伝説の海2
+
+1734: { violence: 4, sexual: 2, gore: 2 }, // ハムナプトラ2 黄金のピラミッド
+
+427641: { violence: 4, sexual: 1, gore: 3 }, // ランペイジ 巨獣大乱闘
+
+451048: { violence: 3, sexual: 2, gore: 1 }, // ジャングル・クルーズ
+
+353486: { violence: 3, sexual: 2, gore: 1 }, // ジュマンジ／ウェルカム・トゥ・ジャングル
+
+447200: { violence: 4, sexual: 1, gore: 2 }, // スカイスクレイパー
+
+436270: { violence: 4, sexual: 2, gore: 2 }, // ブラックアダム
+
+512200: { violence: 3, sexual: 2, gore: 1 }, // ジュマンジ／ネクスト・レベル
+
+550988: { violence: 3, sexual: 2, gore: 2 }, // フリー・ガイ
+
+339846: { violence: 2, sexual: 4, gore: 1 }, // ベイウォッチ
+
+845781: { violence: 2, sexual: 1, gore: 1 }, // レッド・ワン
+
+184315: { violence: 4, sexual: 2, gore: 3 }, // ヘラクレス
+
+10159: { violence: 3, sexual: 2, gore: 2 } // ランダウン ロッキング・ザ・アマゾン
+
 
 
 
