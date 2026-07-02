@@ -762,7 +762,45 @@ const aiRatings = {
 359628: { violence: 3, sexual: 1, gore: 2 }, // 暗殺教室 卒業編
 808667: { violence: 5, sexual: 2, gore: 4 }, // キャラクター
 188198: { violence: 3, sexual: 1, gore: 2 }, // 仮面ライダー×仮面ライダー フォーゼ＆オーズ MOVIE大戦 MEGA MAX
-35069: { violence: 3, sexual: 1, gore: 2 }, // オーズ・電王・オールライダー レッツゴー仮面ライダー
+35069: { violence: 3, sexual: 1, gore: 2 } // オーズ・電王・オールライダー レッツゴー仮面ライダー
+10643: { violence: 4, sexual: 1, gore: 3 }, // ゴジラ2000 ミレニアム
+114372: { violence: 5, sexual: 1, gore: 4 }, // 真救世主伝説 北斗の拳 ラオウ伝 激闘の章
+25050: { violence: 1, sexual: 1, gore: 1 }, // 歩いても 歩いても
+15003: { violence: 4, sexual: 1, gore: 3 }, // チョコレート・ファイター
+374671: { violence: 1, sexual: 1, gore: 1 }, // 海よりもまだ深く
+434221: { violence: 3, sexual: 2, gore: 2 }, // 空海－KU-KAI－美しき王妃の謎
+109080: { violence: 5, sexual: 1, gore: 4 }, // 真救世主伝説 北斗の拳 ラオウ伝 殉愛の章
+51550: { violence: 2, sexual: 1, gore: 1 }, // HERO
+45438: { violence: 3, sexual: 2, gore: 2 }, // 東京攻略
+27799: { violence: 1, sexual: 2, gore: 1 }, // 花とアリス
+131739: { violence: 3, sexual: 1, gore: 3 }, // 聯合艦隊司令長官 山本五十六
+16133: { violence: 4, sexual: 2, gore: 3 }, // SURVIVE STYLE5+
+105231: { violence: 5, sexual: 1, gore: 4 }, // 真救世主伝説 北斗の拳 ZERO ケンシロウ伝
+479034: { violence: 2, sexual: 1, gore: 2 }, // 祈りの幕が下りる時
+79382: { violence: 1, sexual: 1, gore: 1 }, // 奇跡
+297905: { violence: 2, sexual: 1, gore: 1 }, // “新参者”加賀恭一郎「眠りの森」
+114370: { violence: 4, sexual: 1, gore: 3 }, // 真救世主伝説 北斗の拳 ユリア伝
+114371: { violence: 4, sexual: 1, gore: 3 }, // 真救世主伝説 北斗の拳 トキ伝
+122734: { violence: 2, sexual: 1, gore: 2 }, // 麒麟の翼 ～劇場版・新参者～
+130023: { violence: 1, sexual: 1, gore: 1 }, // ステキな金縛り
+
+575222: { violence: 2, sexual: 1, gore: 1 }, // 映画ドラえもん のび太の月面探査記
+2517: { violence: 2, sexual: 1, gore: 1 }, // 誰も知らない
+253451: { violence: 4, sexual: 1, gore: 3 }, // クローズ EXPLODE
+403310: { violence: 3, sexual: 4, gore: 2 }, // HK／変態仮面 アブノーマル・クライシス
+768147: { violence: 1, sexual: 1, gore: 1 }, // 浅草キッド
+532267: { violence: 4, sexual: 1, gore: 3 }, // ザ・ファブル
+40123: { violence: 3, sexual: 1, gore: 2 }, // Genius Party
+141819: { violence: 5, sexual: 2, gore: 4 }, // 許されざる者
+235919: { violence: 2, sexual: 1, gore: 1 }, // ガリレオXX 内海薫最後の事件 愚弄ぶ
+382154: { violence: 5, sexual: 2, gore: 3 }, // ディストラクション・ベイビーズ
+54579: { violence: 3, sexual: 2, gore: 3 }, // 戦慄迷宮3D
+308471: { violence: 4, sexual: 3, gore: 3 }, // 闇金ウシジマくん Part2
+698222: { violence: 3, sexual: 2, gore: 2 }, // 今日から俺は!! 劇場版
+52588: { violence: 1, sexual: 1, gore: 1 }, // 包帯クラブ
+545143: { violence: 2, sexual: 2, gore: 1 }, // 響 -HIBIKI-
+382258: { violence: 2, sexual: 3, gore: 1 }, // ピンクとグレー
+29975: { violence: 1, sexual: 3, gore: 1 } // シュガー＆スパイス ～風味絶佳～
 
 
 
