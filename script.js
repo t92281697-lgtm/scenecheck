@@ -558,7 +558,7 @@ const aiRatings = {
 
 242582: { violence: 3, sexual: 2, gore: 2 }, // ナイトクローラー
 
-45612: { violence: 3, sexual: 1, gore: 2 } // ミッション:8ミニッツ
+45612: { violence: 3, sexual: 1, gore: 2 }, // ミッション:8ミニッツ
 
 146233: { violence: 5, sexual: 1, gore: 4 }, // プリズナーズ
 
