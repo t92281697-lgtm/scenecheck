@@ -872,17 +872,6 @@ aiRating
 ❤️ ${aiRating.sexual}/5　
 🩸 ${aiRating.gore}/5
 </p>
-`
-:
-`
-<p style="color:#888;">
-AI評価データなし
-</p>
-`
-}
-
-
-</p>
 
 </div>
 `
