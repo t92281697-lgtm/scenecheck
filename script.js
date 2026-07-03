@@ -1698,7 +1698,7 @@ onclick="document.getElementById('search').value='${person.name}';searchMovie('$
 
 }
 
-document.getElementById("homeButton").onclick = goHome;
+
 
 function goHome(){
 
