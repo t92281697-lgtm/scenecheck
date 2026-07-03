@@ -256,3 +256,18 @@ font-size:22px;
     margin-top:0;
 }
 
+.movieRow{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding-bottom:10px;
+}
+
+.movieRow .movie-card{
+min-width:170px;
+}
+
+.movieRow::-webkit-scrollbar{
+height:8px;
+}
+
