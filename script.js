@@ -1535,6 +1535,20 @@ document
   .getElementById("search")
   .addEventListener("input", (e) => {
 
+   function scrollRow(id,direction){
+
+const row=document.getElementById(id);
+
+row.scrollBy({
+
+left:600*direction,
+
+behavior:"smooth"
+
+});
+
+}
+
     const query = e.target.value.trim();
 
     if (query.length < 2) {
