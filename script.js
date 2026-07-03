@@ -1636,3 +1636,92 @@ window.onload = function(){
 loadHome();
 
 };
+
+async function loadHome(){
+
+const language =
+document.getElementById("language").value;
+
+const popular =
+await fetch(
+`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=${language}`
+);
+
+const top =
+await fetch(
+`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=${language}`
+);
+
+const upcoming =
+await fetch(
+`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=${language}`
+);
+
+const people =
+await fetch(
+`https://api.themoviedb.org/3/person/popular?api_key=${API_KEY}&language=${language}`
+);
+
+const popularData = await popular.json();
+const topData = await top.json();
+const upcomingData = await upcoming.json();
+const peopleData = await people.json();
+
+renderMovies(popularData.results,popularMoviesDiv);
+renderMovies(topData.results,topMoviesDiv);
+renderMovies(upcomingData.results,upcomingMoviesDiv);
+renderPeople(peopleData.results);
+
+}
+
+function renderMovies(list,target){
+
+target.innerHTML="";
+
+list.slice(0,10).forEach(movie=>{
+
+if(!movie.poster_path) return;
+
+target.innerHTML+=`
+
+<div class="card movie-card"
+
+onclick="showMovie('${movie.id}')">
+
+<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+
+<h2>${movie.title}</h2>
+
+</div>
+
+`;
+
+});
+
+}
+
+function renderPeople(list){
+
+popularPeople.innerHTML="";
+
+list.slice(0,10).forEach(person=>{
+
+if(!person.profile_path) return;
+
+popularPeopleDiv.innerHTML=`
+
+<div class="card movie-card"
+
+onclick="document.getElementById('search').value='${person.name}';searchMovie('${person.name}')">
+
+<img src="https://image.tmdb.org/t/p/w500${person.profile_path}">
+
+<h2>${person.name}</h2>
+
+</div>
+
+`;
+
+});
+
+}
