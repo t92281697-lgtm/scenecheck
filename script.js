@@ -959,15 +959,15 @@ const creditsResponse = await fetch(
 const creditsData = await creditsResponse.json();
 
 personMovies = creditsData.cast
-.filter(movie => movie.poster_path)
+.filter(m => m.poster_path)
 .sort((a, b) => {
-
-  if (b.vote_count !== a.vote_count) {
+  if (b.vote_count !== a.vote_count)
     return b.vote_count - a.vote_count;
-  }
 
-  return b.popularity - a.popularity;
+  if (b.vote_average !== a.vote_average)
+    return b.vote_average - a.vote_average;
 
+  return (b.release_date || "").localeCompare(a.release_date || "");
 });
 
  console.log(personMovies.length);
