@@ -1548,3 +1548,53 @@ document
     searchMovie(query);
 
   });
+
+function loadMoreMovies() {
+
+currentPersonPage++;
+
+currentResults = personMovies.slice(0,currentPersonPage*20);
+
+moviesDiv.innerHTML="";
+
+currentResults.forEach(movie=>{
+
+if(!movie.poster_path) return;
+
+moviesDiv.innerHTML+=`
+<div class="card movie-card" onclick="showMovie('${movie.id}')">
+
+<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+
+<h2>${movie.title}</h2>
+
+<p style="color:#888;font-size:12px;">
+${currentPersonName}出演
+</p>
+
+<p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
+
+<p>📅 ${
+movie.release_date
+? movie.release_date.substring(0,4)
+: "不明"
+}</p>
+
+</div>
+`;
+
+});
+
+if(personMovies.length>currentResults.length){
+
+moviesDiv.innerHTML+=`
+<div style="text-align:center;margin:30px;">
+<button onclick="loadMoreMovies()">
+さらに見る
+</button>
+</div>
+`;
+
+}
+
+}
