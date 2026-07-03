@@ -962,18 +962,11 @@ personMovies = creditsData.cast
 .filter(movie => movie.poster_path)
 .sort((a, b) => {
 
-  // 人気順
-  if (b.popularity !== a.popularity) {
-    return b.popularity - a.popularity;
+  if (b.vote_count !== a.vote_count) {
+    return b.vote_count - a.vote_count;
   }
 
-  // 人気が同じなら評価順
-  if (b.vote_average !== a.vote_average) {
-    return b.vote_average - a.vote_average;
-  }
-
-  // 最後は新しい作品
-  return (b.release_date || "").localeCompare(a.release_date || "");
+  return b.popularity - a.popularity;
 
 });
 
