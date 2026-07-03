@@ -1697,3 +1697,29 @@ onclick="document.getElementById('search').value='${person.name}';searchMovie('$
 });
 
 }
+
+document.getElementById("homeButton").onclick = goHome;
+
+function goHome(){
+
+// 詳細画面を閉じる
+detailPage.style.display="none";
+
+// 検索結果を消す
+searchPage.style.display="block";
+moviesDiv.innerHTML="";
+currentResults=[];
+
+// 検索欄を空にする
+document.getElementById("search").value="";
+
+// ホーム表示
+document.querySelector(".hero").style.display="block";
+
+document.querySelectorAll(".homeSection")
+.forEach(e=>e.style.display="block");
+
+// 一番上へ
+window.scrollTo(0,0);
+
+}
