@@ -938,6 +938,9 @@ const aiRatings = {
 
 async function searchMovie(query) {
 
+ detailPage.style.display = "none";
+searchPage.style.display = "block";
+
  const language =
  document.getElementById("language").value;
 
@@ -1077,6 +1080,22 @@ function showSearchResults() {
 
 detailPage.style.display = "none";
 searchPage.style.display = "block";
+
+ if(currentResults.length===0){
+
+document.querySelector(".hero").style.display="block";
+
+document.querySelectorAll(".homeSection")
+.forEach(e=>e.style.display="block");
+
+}else{
+
+document.querySelector(".hero").style.display="none";
+
+document.querySelectorAll(".homeSection")
+.forEach(e=>e.style.display="none");
+
+}
 
   moviesDiv.innerHTML = "";
 
