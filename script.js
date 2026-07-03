@@ -1508,57 +1508,6 @@ localStorage.setItem(
 
 }
 
-function loadMoreMovies(){
-
-currentPersonPage++;
-
-const start=(currentPersonPage-1)*20;
-const end=start+20;
-
-const more=personMovies.slice(start,end);
-
-more.forEach(movie=>{
-
-if(!movie.poster_path) return;
-
-moviesDiv.innerHTML+=`
-<div class="card movie-card" onclick="showMovie('${movie.id}')">
-
-<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
-
-<h2>${movie.title}</h2>
-
-<p style="color:#888;font-size:12px;">
-${currentPersonName}出演
-</p>
-
-<p>⭐ ${movie.vote_average.toFixed(1)} / 10</p>
-
-<p>📅 ${movie.release_date ? movie.release_date.substring(0,4) : "不明"}</p>
-
-</div>
-`;
-
-});
-
-const btn=document.querySelector("#loadMoreButton");
-
-if(btn) btn.parentElement.remove();
-
-if(personMovies.length>end){
-
-moviesDiv.innerHTML+=`
-<div style="text-align:center;margin:30px;">
-<button id="loadMoreButton" onclick="loadMoreMovies()">
-さらに見る
-</button>
-</div>
-`;
-
-}
-
-}
-
 document
   .getElementById("search")
   .addEventListener("input", (e) => {
@@ -1702,13 +1651,13 @@ onclick="showMovie('${movie.id}')">
 
 function renderPeople(list){
 
-popularPeople.innerHTML="";
+popularPeopleDiv.innerHTML="";
 
 list.slice(0,10).forEach(person=>{
 
 if(!person.profile_path) return;
 
-popularPeopleDiv.innerHTML=`
+popularPeopleDiv.innerHTML += `
 
 <div class="card movie-card"
 
