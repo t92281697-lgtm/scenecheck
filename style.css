@@ -275,6 +275,10 @@ height:8px;
 
 position:relative;
 
+display:flex;
+
+align-items:center;
+
 }
 
 .horizontal-scroll{
@@ -348,6 +352,14 @@ left:0;
 .right{
 
 right:0;
+
+}
+
+.horizontal-scroll .movie-card{
+
+min-width:180px;
+
+flex-shrink:0;
 
 }
 
