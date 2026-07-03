@@ -929,6 +929,11 @@ async function searchMovie(query) {
  const language =
  document.getElementById("language").value;
 
+ document.querySelector(".hero").style.display = "none";
+
+document.querySelectorAll(".homeSection")
+.forEach(e => e.style.display = "none");
+
   const response = await fetch(
   `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=${language}&query=${encodeURIComponent(query)}`
 );
@@ -1551,6 +1556,12 @@ document
     if (query.length < 2) {
       currentResults = [];
       moviesDiv.innerHTML = "";
+
+     // ←追加
+document.querySelector(".hero").style.display = "block";
+
+document.querySelectorAll(".homeSection")
+.forEach(e => e.style.display = "block");
       return;
     }
 
