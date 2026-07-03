@@ -58,23 +58,99 @@ placeholder="映画タイトルを検索..."
 
 
 <div class="homeSection">
-  <h2>🔥 人気作品</h2>
-  <div id="popularMovies" class="movieRow"></div>
+
+<h2>🔥 人気作品</h2>
+
+<div class="slider">
+
+<button class="scrollBtn left"
+onclick="scrollRow('popularMovies',-1)">
+❮
+</button>
+
+<div id="popularMovies"
+class="grid horizontal-scroll">
+</div>
+
+<button class="scrollBtn right"
+onclick="scrollRow('popularMovies',1)">
+❯
+</button>
+
+</div>
+
 </div>
 
 <div class="homeSection">
-  <h2>⭐ 高評価作品</h2>
-  <div id="topMovies" class="movieRow"></div>
+
+<h2>⭐ 高評価作品</h2>
+
+<div class="slider">
+
+<button class="scrollBtn left"
+onclick="scrollRow('topMovies',-1)">
+❮
+</button>
+
+<div id="topMovies"
+class="grid horizontal-scroll">
+</div>
+
+<button class="scrollBtn right"
+onclick="scrollRow('topMovies',1)">
+❯
+</button>
+
+</div>
+
 </div>
 
 <div class="homeSection">
-  <h2>🆕 公開予定</h2>
-  <div id="upcomingMovies" class="movieRow"></div>
+
+<h2>🆕 公開予定</h2>
+
+<div class="slider">
+
+<button class="scrollBtn left"
+onclick="scrollRow('upcomingMovies',-1)">
+❮
+</button>
+
+<div id="upcomingMovies"
+class="grid horizontal-scroll">
+</div>
+
+<button class="scrollBtn right"
+onclick="scrollRow('upcomingMovies',1)">
+❯
+</button>
+
+</div>
+
 </div>
 
 <div class="homeSection">
-  <h2>🎭 人気俳優</h2>
-  <div id="popularPeople" class="movieRow"></div>
+
+<h2>🎭 人気俳優</h2>
+
+<div class="slider">
+
+<button class="scrollBtn left"
+onclick="scrollRow('popularPeople',-1)">
+❮
+</button>
+
+<div id="popularPeople"
+class="grid horizontal-scroll">
+</div>
+
+<button class="scrollBtn right"
+onclick="scrollRow('popularPeople',1)">
+❯
+</button>
+
+</div>
+
 </div>
 
 <div id="detailPage" style="display:none;"></div>
