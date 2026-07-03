@@ -1,3 +1,15 @@
+const popularMoviesDiv =
+document.getElementById("popularMovies");
+
+const topMoviesDiv =
+document.getElementById("topMovies");
+
+const upcomingMoviesDiv =
+document.getElementById("upcomingMovies");
+
+const popularPeopleDiv =
+document.getElementById("popularPeople");
+
 const searchPage = document.getElementById("searchPage");
 const detailPage = document.getElementById("detailPage");
 
