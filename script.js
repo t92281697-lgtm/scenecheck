@@ -1116,6 +1116,10 @@ async function showMovie(id){
 
 currentMovieId = id;
 
+document.querySelector(".hero").style.display = "none";
+
+document.querySelectorAll(".homeSection")
+.forEach(e => e.style.display = "none");
 searchPage.style.display = "none";
 detailPage.style.display = "block";
 
