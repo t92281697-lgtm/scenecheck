@@ -959,7 +959,23 @@ const creditsResponse = await fetch(
 const creditsData = await creditsResponse.json();
 
 personMovies = creditsData.cast
-.sort((a,b)=>b.popularity-a.popularity);
+.filter(movie => movie.poster_path)
+.sort((a, b) => {
+
+  // 人気順
+  if (b.popularity !== a.popularity) {
+    return b.popularity - a.popularity;
+  }
+
+  // 人気が同じなら評価順
+  if (b.vote_average !== a.vote_average) {
+    return b.vote_average - a.vote_average;
+  }
+
+  // 最後は新しい作品
+  return (b.release_date || "").localeCompare(a.release_date || "");
+
+});
 
  console.log(personMovies.length);
 
