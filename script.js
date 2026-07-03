@@ -1630,3 +1630,9 @@ moviesDiv.innerHTML+=`
 }
 
 }
+
+window.onload = function(){
+
+loadHome();
+
+};
