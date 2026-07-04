@@ -23,7 +23,7 @@ let currentPersonPage = 1;
 let currentPersonName = "";
 let isPersonSearch = false;
 
-const API_KEY = "11098d35652f534fcb8f75ad72907603";
+const API_KEY = "ac0831b065a0daa590bd4bb6eda0ef6b";
 
 let currentMovieId = null;
 
