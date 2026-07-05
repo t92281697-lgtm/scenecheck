@@ -1530,7 +1530,7 @@ movie.budget
 
 }
 
-function submitRating() {
+async function submitRating() {
 
 const violence =
 document.getElementById("violence").selectedIndex + 1;
@@ -1553,6 +1553,14 @@ localStorage.setItem(
     gore
   })
 );
+
+  await addDoc(collection(db, "ratings"), {
+  movieId: currentMovieId,
+  violence,
+  sexual,
+  gore,
+  created: Date.now()
+});
 
 }
 
