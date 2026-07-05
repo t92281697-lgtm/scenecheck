@@ -20,7 +20,7 @@ import {
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-</script>
+
 const db = getFirestore(app);
 
 const popularMoviesDiv =
