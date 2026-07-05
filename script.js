@@ -1757,3 +1757,10 @@ document.querySelectorAll(".homeSection")
 window.scrollTo(0,0);
 
 }
+
+window.showMovie = showMovie;
+window.showSearchResults = showSearchResults;
+window.loadMoreMovies = loadMoreMovies;
+window.submitRating = submitRating;
+window.goHome = goHome;
+window.searchMovie = searchMovie;
