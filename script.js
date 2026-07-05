@@ -8,6 +8,21 @@ import {
   where
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDtWRoIh39Kvyx-c4fJLEf6rdT8FVSwU_A",
+    authDomain: "scenecheck-551e1.firebaseapp.com",
+    projectId: "scenecheck-551e1",
+    storageBucket: "scenecheck-551e1.firebasestorage.app",
+    messagingSenderId: "873234040894",
+    appId: "1:873234040894:web:6e1ea1973b2de50686a96f"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+const db = getFirestore(app);
+
 const popularMoviesDiv =
 document.getElementById("popularMovies");
 
