@@ -1274,6 +1274,32 @@ if (aiRating) {
   localStorage.getItem("rating_" + id)
 );
 
+  const q = query(
+  collection(db, "ratings"),
+  where("movieId", "==", String(id))
+);
+
+const snapshot = await getDocs(q);
+
+let avgViolence = 0;
+let avgSexual = 0;
+let avgGore = 0;
+let voteCount = snapshot.size;
+
+snapshot.forEach(doc => {
+  const d = doc.data();
+
+  avgViolence += d.violence;
+  avgSexual += d.sexual;
+  avgGore += d.gore;
+});
+
+if (voteCount > 0) {
+  avgViolence /= voteCount;
+  avgSexual /= voteCount;
+  avgGore /= voteCount;
+}
+
   const creditsResponse = await fetch(
   `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`
 );
@@ -1397,6 +1423,36 @@ AI評価データなし
 <hr style="margin:20px 0; border-color:#333;">
 
 <div class="vote-box">
+
+${
+voteCount > 0
+? `
+<div class="vote-summary">
+
+<h3>⭐ SceneCheckユーザー評価</h3>
+
+<p>💥 暴力　${avgViolence.toFixed(1)} / 5</p>
+
+<p>❤️ 性的　${avgSexual.toFixed(1)} / 5</p>
+
+<p>🩸 グロ　${avgGore.toFixed(1)} / 5</p>
+
+<p style="color:#888;">
+${voteCount}件の評価
+</p>
+
+</div>
+`
+: `
+<div class="vote-summary">
+
+<h3>⭐ SceneCheckユーザー評価</h3>
+
+<p>まだ評価がありません。</p>
+
+</div>
+`
+}
  
 <h3>⚠️ SceneCheck評価</h3>
 
